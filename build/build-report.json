@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "verdict": "pass",
+  "reasons": [],
+  "scope": {
+    "checked": [
+      "1 program(s): each compiled alone and all 1 Java file(s) compiled together with javac -proc:none",
+      "top-level class names across programs",
+      "0 copybook(s) for drift between files (text and analyzer layout)",
+      "0 static CALL statement(s): target present, USING count and argument lengths where both sides are plain items"
+    ],
+    "notChecked": [
+      "behaviour of the programs together: each program is verified on its own by differential testing against the original COBOL",
+      "that the programs' files and datasets line up at run time (JCL step order, DD wiring)",
+      "CALL USING arguments that are subscripted, computed, BY VALUE or outside WORKING-STORAGE/LINKAGE items",
+      "dynamic CALLs and programs outside this repository"
+    ]
+  },
+  "programs": [
+    {
+      "name": "HTDBDEF",
+      "mainClass": "Htdbdef",
+      "javaFiles": [
+        "Htdbdef.java"
+      ],
+      "classes": [
+        "Htdbdef"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    }
+  ],
+  "whole": {
+    "compile": {
+      "status": "ok",
+      "javacExit": 0,
+      "diagnostics": []
+    },
+    "sources": 1
+  },
+  "classCollisions": [],
+  "copybooks": {
+    "names": [],
+    "drift": []
+  },
+  "calls": {
+    "checked": 0,
+    "findings": []
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "HTDBDEF",
+        "kind": "program"
+      }
+    ],
+    "edges": []
+  }
+}
