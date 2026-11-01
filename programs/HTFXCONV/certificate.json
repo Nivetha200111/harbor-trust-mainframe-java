@@ -1,0 +1,49 @@
+{
+  "version": "0.1",
+  "program": "HTFXCONV",
+  "legacy": {
+    "repository": "https://github.com/Nivetha200111/harbor-trust-mainframe",
+    "commit": "cee9da8c58771d66f16fa716d55f02cae2bf81c3",
+    "path": "app/cbl/HTFXCONV.cbl",
+    "copybooks": [
+      "app/cpy/HTFX.cpy",
+      "app/cpy/HTMONEY.cpy",
+      "app/cpy/HTNEST.cpy",
+      "app/cpy/HTSTATUS.cpy",
+      "app/cpy/HTERROR.cpy"
+    ],
+    "modules": [
+      "app/cbl/HTFXRT.cbl",
+      "app/cbl/HTAUDT.cbl"
+    ],
+    "job": "app/jcl/HTFXCONV.jcl"
+  },
+  "java": {
+    "mainClass": "Htfxconv",
+    "files": [
+      "Htfxconv.java"
+    ]
+  },
+  "verification": {
+    "passed": 1401,
+    "total": 1401,
+    "stdoutMatch": true,
+    "seed": 4243,
+    "verifier": {
+      "repository": "https://github.com/Nivetha200111/Diocle",
+      "commit": "f94bb92619459c71856f5b32f712d8eb0452de63",
+      "gnucobol": "cobc (GnuCOBOL) 3.2.0"
+    }
+  },
+  "agent": {
+    "runId": "htfxconv-20261101-154512",
+    "model": "muse-spark-1.3-contributor",
+    "mode": "translate",
+    "rounds": 1,
+    "modelCalls": 13,
+    "totalTokens": 487516,
+    "estimatedCostUsd": 0.077323,
+    "memoryLessonsUsed": 14
+  },
+  "issuedAt": "2026-11-01T11:25:54+00:00"
+}

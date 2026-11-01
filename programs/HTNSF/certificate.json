@@ -1,0 +1,40 @@
+{
+  "version": "0.1",
+  "program": "HTNSF",
+  "legacy": {
+    "repository": "https://github.com/Nivetha200111/harbor-trust-mainframe",
+    "commit": "cee9da8c58771d66f16fa716d55f02cae2bf81c3",
+    "path": "app/cbl/HTNSF.cbl",
+    "copybooks": [],
+    "modules": [],
+    "job": "app/jcl/HTNSF.jcl"
+  },
+  "java": {
+    "mainClass": "Htnsf",
+    "files": [
+      "Htnsf.java"
+    ]
+  },
+  "verification": {
+    "passed": 1401,
+    "total": 1401,
+    "stdoutMatch": true,
+    "seed": 4243,
+    "verifier": {
+      "repository": "https://github.com/Nivetha200111/Diocle",
+      "commit": "f94bb92619459c71856f5b32f712d8eb0452de63",
+      "gnucobol": "cobc (GnuCOBOL) 3.2.0"
+    }
+  },
+  "agent": {
+    "runId": "htnsf-20261101-161251",
+    "model": "muse-spark-1.3-contributor",
+    "mode": "translate",
+    "rounds": 1,
+    "modelCalls": 22,
+    "totalTokens": 564668,
+    "estimatedCostUsd": 0.063951,
+    "memoryLessonsUsed": 16
+  },
+  "issuedAt": "2026-11-01T11:25:54+00:00"
+}

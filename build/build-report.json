@@ -1,0 +1,1188 @@
+{
+  "version": "0.1",
+  "verdict": "fail",
+  "reasons": [
+    "htdormsw...:71: CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING",
+    "htdormsw...:68: CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING",
+    "htdormsw...:68: CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING",
+    "htfxconv...:68: CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING",
+    "htovdfee...:68: CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING"
+  ],
+  "scope": {
+    "checked": [
+      "19 program(s): each compiled alone and all 19 Java file(s) compiled together with javac -proc:none",
+      "top-level class names across programs",
+      "12 copybook(s) for drift between files (text and analyzer layout)",
+      "26 static CALL statement(s): target present, USING count and argument lengths where both sides are plain items"
+    ],
+    "notChecked": [
+      "behaviour of the programs together: each program is verified on its own by differential testing against the original COBOL",
+      "that the programs' files and datasets line up at run time (JCL step order, DD wiring)",
+      "CALL USING arguments that are subscripted, computed, BY VALUE or outside WORKING-STORAGE/LINKAGE items",
+      "dynamic CALLs and programs outside this repository"
+    ]
+  },
+  "programs": [
+    {
+      "name": "HTCBR",
+      "mainClass": "Htcbr",
+      "javaFiles": [
+        "Htcbr.java"
+      ],
+      "classes": [
+        "Htcbr"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTCHK",
+      "mainClass": "Htchk",
+      "javaFiles": [
+        "Htchk.java"
+      ],
+      "classes": [
+        "Htchk"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTCHQCLR",
+      "mainClass": "Htchqclr",
+      "javaFiles": [
+        "Htchqclr.java"
+      ],
+      "classes": [
+        "Htchqclr"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTCTRLBR",
+      "mainClass": "Htctrlbr",
+      "javaFiles": [
+        "Htctrlbr.java"
+      ],
+      "classes": [
+        "Htctrlbr"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTDBDEF",
+      "mainClass": "Htdbdef",
+      "javaFiles": [
+        "Htdbdef.java"
+      ],
+      "classes": [
+        "Htdbdef"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTDOR",
+      "mainClass": "Htdor",
+      "javaFiles": [
+        "Htdor.java"
+      ],
+      "classes": [
+        "Htdor"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTDORMSW",
+      "mainClass": "Htdormsw",
+      "javaFiles": [
+        "Htdormsw.java"
+      ],
+      "classes": [
+        "Htdormsw"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTFXC",
+      "mainClass": "Htfxc",
+      "javaFiles": [
+        "Htfxc.java"
+      ],
+      "classes": [
+        "Htfxc"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTFXCONV",
+      "mainClass": "Htfxconv",
+      "javaFiles": [
+        "Htfxconv.java"
+      ],
+      "classes": [
+        "Htfxconv"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTGLR",
+      "mainClass": "Htglr",
+      "javaFiles": [
+        "Htglr.java"
+      ],
+      "classes": [
+        "Htglr"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTGLRECO",
+      "mainClass": "Htglreco",
+      "javaFiles": [
+        "Htglreco.java"
+      ],
+      "classes": [
+        "Htglreco"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTIACR",
+      "mainClass": "Htiacr",
+      "javaFiles": [
+        "Htiacr.java"
+      ],
+      "classes": [
+        "Htiacr"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTLOANAM",
+      "mainClass": "Htloanam",
+      "javaFiles": [
+        "Htloanam.java"
+      ],
+      "classes": [
+        "Htloanam"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTLON",
+      "mainClass": "Htlon",
+      "javaFiles": [
+        "Htlon.java"
+      ],
+      "classes": [
+        "Htlon"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTNSF",
+      "mainClass": "Htnsf",
+      "javaFiles": [
+        "Htnsf.java"
+      ],
+      "classes": [
+        "Htnsf"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTOVDFEE",
+      "mainClass": "Htovdfee",
+      "javaFiles": [
+        "Htovdfee.java"
+      ],
+      "classes": [
+        "Htovdfee"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTSRT",
+      "mainClass": "Htsrt",
+      "javaFiles": [
+        "Htsrt.java"
+      ],
+      "classes": [
+        "Htsrt"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTSTM",
+      "mainClass": "Htstm",
+      "javaFiles": [
+        "Htstm.java"
+      ],
+      "classes": [
+        "Htstm"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "HTSTMTM",
+      "mainClass": "Htstmtm",
+      "javaFiles": [
+        "Htstmtm.java"
+      ],
+      "classes": [
+        "Htstmtm"
+      ],
+      "compile": {
+        "status": "ok",
+        "javacExit": 0,
+        "diagnostics": []
+      }
+    }
+  ],
+  "whole": {
+    "compile": {
+      "status": "ok",
+      "javacExit": 0,
+      "diagnostics": []
+    },
+    "sources": 19
+  },
+  "classCollisions": [],
+  "copybooks": {
+    "names": [
+      "HTACCT",
+      "HTCHECK",
+      "HTDATE",
+      "HTERROR",
+      "HTFX",
+      "HTLEDGER",
+      "HTLOAN",
+      "HTMONEY",
+      "HTNEST",
+      "HTREDE",
+      "HTSTATUS",
+      "HTTRAN"
+    ],
+    "drift": []
+  },
+  "calls": {
+    "checked": 26,
+    "findings": [
+      {
+        "severity": "fail",
+        "kind": "arity",
+        "caller": "HTDORMSW",
+        "callee": "HTAUDT",
+        "file": "htdormsw/src/HTDATE.cbl",
+        "line": 71,
+        "message": "CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING"
+      },
+      {
+        "severity": "info",
+        "kind": "runtime-routine",
+        "caller": "HTDORMSW",
+        "callee": "CEE3ABD",
+        "file": "htdormsw/src/HTDATE.cbl",
+        "line": 79,
+        "message": "CALL 'CEE3ABD' is a runtime or system routine, not a program of this repository; not checked"
+      },
+      {
+        "severity": "fail",
+        "kind": "arity",
+        "caller": "HTDORMSW",
+        "callee": "HTAUDT",
+        "file": "htdormsw/src/HTAUDT.cbl",
+        "line": 68,
+        "message": "CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING"
+      },
+      {
+        "severity": "info",
+        "kind": "runtime-routine",
+        "caller": "HTDORMSW",
+        "callee": "CEE3ABD",
+        "file": "htdormsw/src/HTAUDT.cbl",
+        "line": 75,
+        "message": "CALL 'CEE3ABD' is a runtime or system routine, not a program of this repository; not checked"
+      },
+      {
+        "severity": "fail",
+        "kind": "arity",
+        "caller": "HTDORMSW",
+        "callee": "HTAUDT",
+        "file": "htdormsw/src/HTPOST.cbl",
+        "line": 68,
+        "message": "CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING"
+      },
+      {
+        "severity": "info",
+        "kind": "runtime-routine",
+        "caller": "HTDORMSW",
+        "callee": "CEE3ABD",
+        "file": "htdormsw/src/HTPOST.cbl",
+        "line": 76,
+        "message": "CALL 'CEE3ABD' is a runtime or system routine, not a program of this repository; not checked"
+      },
+      {
+        "severity": "fail",
+        "kind": "arity",
+        "caller": "HTFXCONV",
+        "callee": "HTAUDT",
+        "file": "htfxconv/src/HTFXRT.cbl",
+        "line": 68,
+        "message": "CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING"
+      },
+      {
+        "severity": "info",
+        "kind": "runtime-routine",
+        "caller": "HTFXCONV",
+        "callee": "CEE3ABD",
+        "file": "htfxconv/src/HTFXRT.cbl",
+        "line": 75,
+        "message": "CALL 'CEE3ABD' is a runtime or system routine, not a program of this repository; not checked"
+      },
+      {
+        "severity": "fail",
+        "kind": "arity",
+        "caller": "HTOVDFEE",
+        "callee": "HTAUDT",
+        "file": "htovdfee/src/HTFEEP.cbl",
+        "line": 68,
+        "message": "CALL 'HTAUDT' passes 1 argument(s) but HTAUDT expects 3 in PROCEDURE DIVISION USING"
+      },
+      {
+        "severity": "info",
+        "kind": "runtime-routine",
+        "caller": "HTOVDFEE",
+        "callee": "CEE3ABD",
+        "file": "htovdfee/src/HTFEEP.cbl",
+        "line": 75,
+        "message": "CALL 'CEE3ABD' is a runtime or system routine, not a program of this repository; not checked"
+      }
+    ]
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "CEE3ABD",
+        "kind": "external"
+      },
+      {
+        "id": "HT.OUT.ACCTOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.CLEARAUDT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.CLEAROUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.CTRLBRAUDT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.CTRLBROUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.DORMOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.DORMSWOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.FXCONVOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.FXOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.GLRECAUDT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.GLRECOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.LOANAMOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.LOANOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.MERGEOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.OVDFEEOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.POSTOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.RECONOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.REPORTOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.STMTMAUDT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.STMTMOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.OUT.STMTOUT",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.ACCTIN",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.CHECKIN",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.FXIN",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.LOANIN",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.POSTIN",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.SORTIN",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.TRANIN",
+        "kind": "file"
+      },
+      {
+        "id": "HT.SYNTH.TXNIN",
+        "kind": "file"
+      },
+      {
+        "id": "HTACCT",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTAUDT",
+        "kind": "program"
+      },
+      {
+        "id": "HTCBR",
+        "kind": "program"
+      },
+      {
+        "id": "HTCHECK",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTCHK",
+        "kind": "program"
+      },
+      {
+        "id": "HTCHQCLR",
+        "kind": "program"
+      },
+      {
+        "id": "HTCTRLBR",
+        "kind": "program"
+      },
+      {
+        "id": "HTDATE",
+        "kind": "program"
+      },
+      {
+        "id": "HTDATEUT",
+        "kind": "program"
+      },
+      {
+        "id": "HTDBDEF",
+        "kind": "program"
+      },
+      {
+        "id": "HTDOR",
+        "kind": "program"
+      },
+      {
+        "id": "HTDORMSW",
+        "kind": "program"
+      },
+      {
+        "id": "HTERROR",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTFEEP",
+        "kind": "program"
+      },
+      {
+        "id": "HTFX",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTFXC",
+        "kind": "program"
+      },
+      {
+        "id": "HTFXCONV",
+        "kind": "program"
+      },
+      {
+        "id": "HTFXRT",
+        "kind": "program"
+      },
+      {
+        "id": "HTGLR",
+        "kind": "program"
+      },
+      {
+        "id": "HTGLRECO",
+        "kind": "program"
+      },
+      {
+        "id": "HTIACR",
+        "kind": "program"
+      },
+      {
+        "id": "HTLEDGER",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTLOAN",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTLOANAM",
+        "kind": "program"
+      },
+      {
+        "id": "HTLON",
+        "kind": "program"
+      },
+      {
+        "id": "HTMONEY",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTNEST",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTNSF",
+        "kind": "program"
+      },
+      {
+        "id": "HTOVDFEE",
+        "kind": "program"
+      },
+      {
+        "id": "HTPOST",
+        "kind": "program"
+      },
+      {
+        "id": "HTREDE",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTSRT",
+        "kind": "program"
+      },
+      {
+        "id": "HTSTATUS",
+        "kind": "copybook"
+      },
+      {
+        "id": "HTSTM",
+        "kind": "program"
+      },
+      {
+        "id": "HTSTMTM",
+        "kind": "program"
+      },
+      {
+        "id": "HTTRAN",
+        "kind": "copybook"
+      }
+    ],
+    "edges": [
+      {
+        "from": "HTAUDT",
+        "to": "CEE3ABD",
+        "kind": "call"
+      },
+      {
+        "from": "HTAUDT",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTCBR",
+        "to": "HT.OUT.REPORTOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTCBR",
+        "to": "HT.SYNTH.POSTIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTCHK",
+        "to": "HT.OUT.CLEAROUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTCHK",
+        "to": "HT.SYNTH.CHECKIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HT.OUT.CLEARAUDT",
+        "kind": "file"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HT.OUT.CLEAROUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HT.SYNTH.CHECKIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HTCHECK",
+        "kind": "copy"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HTDATE",
+        "kind": "copy"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HTDATEUT",
+        "kind": "call"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HTERROR",
+        "kind": "copy"
+      },
+      {
+        "from": "HTCHQCLR",
+        "to": "HTSTATUS",
+        "kind": "copy"
+      },
+      {
+        "from": "HTCTRLBR",
+        "to": "HT.OUT.CTRLBRAUDT",
+        "kind": "file"
+      },
+      {
+        "from": "HTCTRLBR",
+        "to": "HT.OUT.CTRLBROUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTCTRLBR",
+        "to": "HT.SYNTH.TRANIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTCTRLBR",
+        "to": "HTDATEUT",
+        "kind": "call"
+      },
+      {
+        "from": "HTCTRLBR",
+        "to": "HTERROR",
+        "kind": "copy"
+      },
+      {
+        "from": "HTCTRLBR",
+        "to": "HTSTATUS",
+        "kind": "copy"
+      },
+      {
+        "from": "HTCTRLBR",
+        "to": "HTTRAN",
+        "kind": "copy"
+      },
+      {
+        "from": "HTDATE",
+        "to": "CEE3ABD",
+        "kind": "call"
+      },
+      {
+        "from": "HTDATE",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTDOR",
+        "to": "HT.OUT.DORMOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTDOR",
+        "to": "HT.SYNTH.ACCTIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HT.OUT.DORMSWOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HT.SYNTH.ACCTIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HTACCT",
+        "kind": "copy"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HTDATE",
+        "kind": "call"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HTDATE",
+        "kind": "copy"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HTNEST",
+        "kind": "copy"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HTPOST",
+        "kind": "call"
+      },
+      {
+        "from": "HTDORMSW",
+        "to": "HTSTATUS",
+        "kind": "copy"
+      },
+      {
+        "from": "HTFEEP",
+        "to": "CEE3ABD",
+        "kind": "call"
+      },
+      {
+        "from": "HTFEEP",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTFXC",
+        "to": "HT.OUT.FXOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTFXC",
+        "to": "HT.SYNTH.FXIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTFXCONV",
+        "to": "HT.OUT.FXCONVOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTFXCONV",
+        "to": "HT.SYNTH.FXIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTFXCONV",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTFXCONV",
+        "to": "HTFX",
+        "kind": "copy"
+      },
+      {
+        "from": "HTFXCONV",
+        "to": "HTFXRT",
+        "kind": "call"
+      },
+      {
+        "from": "HTFXCONV",
+        "to": "HTMONEY",
+        "kind": "copy"
+      },
+      {
+        "from": "HTFXCONV",
+        "to": "HTNEST",
+        "kind": "copy"
+      },
+      {
+        "from": "HTFXRT",
+        "to": "CEE3ABD",
+        "kind": "call"
+      },
+      {
+        "from": "HTFXRT",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTGLR",
+        "to": "HT.OUT.RECONOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTGLR",
+        "to": "HT.SYNTH.POSTIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTGLRECO",
+        "to": "HT.OUT.GLRECAUDT",
+        "kind": "file"
+      },
+      {
+        "from": "HTGLRECO",
+        "to": "HT.OUT.GLRECOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTGLRECO",
+        "to": "HT.SYNTH.TRANIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTGLRECO",
+        "to": "HTDATE",
+        "kind": "copy"
+      },
+      {
+        "from": "HTGLRECO",
+        "to": "HTDATEUT",
+        "kind": "call"
+      },
+      {
+        "from": "HTGLRECO",
+        "to": "HTERROR",
+        "kind": "copy"
+      },
+      {
+        "from": "HTGLRECO",
+        "to": "HTLEDGER",
+        "kind": "copy"
+      },
+      {
+        "from": "HTIACR",
+        "to": "HT.OUT.ACCTOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTIACR",
+        "to": "HT.SYNTH.ACCTIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTIACR",
+        "to": "HTACCT",
+        "kind": "copy"
+      },
+      {
+        "from": "HTIACR",
+        "to": "HTDATE",
+        "kind": "call"
+      },
+      {
+        "from": "HTIACR",
+        "to": "HTNEST",
+        "kind": "copy"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HT.OUT.LOANAMOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HT.SYNTH.LOANIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HTDATE",
+        "kind": "call"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HTDATE",
+        "kind": "copy"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HTLOAN",
+        "kind": "copy"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HTMONEY",
+        "kind": "copy"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HTNEST",
+        "kind": "copy"
+      },
+      {
+        "from": "HTLOANAM",
+        "to": "HTPOST",
+        "kind": "call"
+      },
+      {
+        "from": "HTLON",
+        "to": "HT.OUT.LOANOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTLON",
+        "to": "HT.SYNTH.LOANIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTNSF",
+        "to": "HT.OUT.POSTOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTNSF",
+        "to": "HT.SYNTH.TXNIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HT.OUT.OVDFEEOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HT.SYNTH.TRANIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HTACCT",
+        "kind": "copy"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HTERROR",
+        "kind": "copy"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HTFEEP",
+        "kind": "call"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HTNEST",
+        "kind": "copy"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HTPOST",
+        "kind": "call"
+      },
+      {
+        "from": "HTOVDFEE",
+        "to": "HTREDE",
+        "kind": "copy"
+      },
+      {
+        "from": "HTPOST",
+        "to": "CEE3ABD",
+        "kind": "call"
+      },
+      {
+        "from": "HTPOST",
+        "to": "HTAUDT",
+        "kind": "call"
+      },
+      {
+        "from": "HTSRT",
+        "to": "HT.OUT.MERGEOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTSRT",
+        "to": "HT.SYNTH.SORTIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTSTM",
+        "to": "HT.OUT.STMTOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTSTM",
+        "to": "HT.SYNTH.TXNIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HT.OUT.STMTMAUDT",
+        "kind": "file"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HT.OUT.STMTMOUT",
+        "kind": "file"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HT.SYNTH.TRANIN",
+        "kind": "file"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HTDATE",
+        "kind": "copy"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HTDATEUT",
+        "kind": "call"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HTERROR",
+        "kind": "copy"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HTSTATUS",
+        "kind": "copy"
+      },
+      {
+        "from": "HTSTMTM",
+        "to": "HTTRAN",
+        "kind": "copy"
+      }
+    ]
+  }
+}
