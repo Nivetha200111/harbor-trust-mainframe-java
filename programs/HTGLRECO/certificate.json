@@ -1,0 +1,46 @@
+{
+  "version": "0.1",
+  "program": "HTGLRECO",
+  "legacy": {
+    "repository": "https://github.com/Nivetha200111/harbor-trust-mainframe",
+    "commit": "cee9da8c58771d66f16fa716d55f02cae2bf81c3",
+    "path": "app/cbl/HTGLRECO.cbl",
+    "copybooks": [
+      "app/cpy/HTLEDGER.cpy",
+      "app/cpy/HTDATE.cpy",
+      "app/cpy/HTERROR.cpy"
+    ],
+    "modules": [
+      "app/cbl/HTDATEUT.cbl"
+    ],
+    "job": "app/jcl/HTGLRECO.jcl"
+  },
+  "java": {
+    "mainClass": "Htglreco",
+    "files": [
+      "Htglreco.java"
+    ]
+  },
+  "verification": {
+    "passed": 1801,
+    "total": 1801,
+    "stdoutMatch": true,
+    "seed": 4243,
+    "verifier": {
+      "repository": "https://github.com/Nivetha200111/Diocle",
+      "commit": "f94bb92619459c71856f5b32f712d8eb0452de63",
+      "gnucobol": "cobc (GnuCOBOL) 3.2.0"
+    }
+  },
+  "agent": {
+    "runId": "htglreco-20261101-155131",
+    "model": "muse-spark-1.3-contributor",
+    "mode": "translate",
+    "rounds": 1,
+    "modelCalls": 7,
+    "totalTokens": 130321,
+    "estimatedCostUsd": 0.032264,
+    "memoryLessonsUsed": 16
+  },
+  "issuedAt": "2026-11-01T11:25:54+00:00"
+}

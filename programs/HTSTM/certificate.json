@@ -1,0 +1,40 @@
+{
+  "version": "0.1",
+  "program": "HTSTM",
+  "legacy": {
+    "repository": "https://github.com/Nivetha200111/harbor-trust-mainframe",
+    "commit": "cee9da8c58771d66f16fa716d55f02cae2bf81c3",
+    "path": "app/cbl/HTSTM.cbl",
+    "copybooks": [],
+    "modules": [],
+    "job": "app/jcl/HTSTM.jcl"
+  },
+  "java": {
+    "mainClass": "Htstm",
+    "files": [
+      "Htstm.java"
+    ]
+  },
+  "verification": {
+    "passed": 1401,
+    "total": 1401,
+    "stdoutMatch": true,
+    "seed": 4243,
+    "verifier": {
+      "repository": "https://github.com/Nivetha200111/Diocle",
+      "commit": "f94bb92619459c71856f5b32f712d8eb0452de63",
+      "gnucobol": "cobc (GnuCOBOL) 3.2.0"
+    }
+  },
+  "agent": {
+    "runId": "htstm-20261101-162450",
+    "model": "muse-spark-1.3-contributor",
+    "mode": "translate",
+    "rounds": 1,
+    "modelCalls": 20,
+    "totalTokens": 507405,
+    "estimatedCostUsd": 0.066085,
+    "memoryLessonsUsed": 17
+  },
+  "issuedAt": "2026-11-01T11:25:54+00:00"
+}

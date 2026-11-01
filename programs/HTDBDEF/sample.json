@@ -1,0 +1,23 @@
+{
+  "name": "htdbdef",
+  "description": "Imported from https://github.com/Nivetha200111/harbor-trust-mainframe at cee9da8c5877",
+  "program": "HTDBDEF",
+  "source": "src/HTDBDEF.cbl",
+  "modules": [],
+  "collation": "ebcdic",
+  "copybookDir": "copybooks",
+  "javaConversion": {
+    "dir": "java-conversion",
+    "mainClass": "Htdbdef",
+    "origin": "none yet: translate with the converter's run command"
+  },
+  "layoutsNote": "Derived from the copybooks by services/analyzer.",
+  "files": [],
+  "displayOnly": true,
+  "import": {
+    "repository": "https://github.com/Nivetha200111/harbor-trust-mainframe",
+    "commit": "cee9da8c58771d66f16fa716d55f02cae2bf81c3",
+    "path": "app/cbl/HTDBDEF.cbl",
+    "job": null
+  }
+}

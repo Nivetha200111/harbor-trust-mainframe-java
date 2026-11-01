@@ -1,0 +1,2057 @@
+{
+  "name": "htfxconv",
+  "description": "Imported from https://github.com/Nivetha200111/harbor-trust-mainframe at cee9da8c5877",
+  "program": "HTFXCONV",
+  "source": "src/HTFXCONV.cbl",
+  "modules": [
+    "src/HTFXRT.cbl",
+    "src/HTAUDT.cbl"
+  ],
+  "collation": "ebcdic",
+  "copybookDir": "copybooks",
+  "dd": {
+    "input": "INPUT-FILE",
+    "output": "OUTPUT-FILE"
+  },
+  "javaConversion": {
+    "dir": "java-conversion",
+    "mainClass": "Htfxconv",
+    "origin": "none yet: translate with the converter's run command"
+  },
+  "layoutsNote": "Derived from the copybooks by services/analyzer.",
+  "layouts": {
+    "input": {
+      "record": "IN-RECORD",
+      "fields": [
+        {
+          "name": "IN-RECORD",
+          "kind": "alnum",
+          "length": 160
+        }
+      ],
+      "format": "line"
+    },
+    "output": {
+      "record": "OUT-RECORD",
+      "fields": [
+        {
+          "name": "OUT-RECORD",
+          "kind": "alnum",
+          "length": 200
+        }
+      ],
+      "format": "line"
+    }
+  },
+  "fixtureCases": [
+    {
+      "id": "repo-0001",
+      "record": "AYN000000001BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 1 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0002",
+      "record": "AYN000000004BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 4 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0003",
+      "record": "AYN000000007BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 7 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0004",
+      "record": "AYN000000010BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 10 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0005",
+      "record": "AYN000000013BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 13 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0006",
+      "record": "AYN000000016BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 16 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0007",
+      "record": "AYN000000019BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 19 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0008",
+      "record": "AYN000000022BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 22 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0009",
+      "record": "AYN000000025BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 25 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0010",
+      "record": "AYN000000028BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 28 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0011",
+      "record": "AYN000000031BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 31 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0012",
+      "record": "AYN000000034BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 34 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0013",
+      "record": "AYN000000037BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 37 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0014",
+      "record": "AYN000000040BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 40 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0015",
+      "record": "AYN000000043BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 43 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0016",
+      "record": "AYN000000046BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 46 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0017",
+      "record": "AYN000000049BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 49 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0018",
+      "record": "AYN000000052BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 52 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0019",
+      "record": "AYN000000055BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 55 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0020",
+      "record": "AYN000000058BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 58 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0021",
+      "record": "AYN000000061BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 61 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0022",
+      "record": "AYN000000064BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 64 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0023",
+      "record": "AYN000000067BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 67 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0024",
+      "record": "AYN000000070BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 70 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0025",
+      "record": "AYN000000073BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 73 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0026",
+      "record": "AYN000000076BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 76 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0027",
+      "record": "AYN000000079BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 79 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0028",
+      "record": "AYN000000082BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 82 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0029",
+      "record": "AYN000000085BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 85 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0030",
+      "record": "AYN000000088BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 88 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0031",
+      "record": "AYN000000091BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 91 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0032",
+      "record": "AYN000000094BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 94 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0033",
+      "record": "AYN000000097BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 97 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0034",
+      "record": "AYN000000100BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 100 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0035",
+      "record": "AYN000000103BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 103 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0036",
+      "record": "AYN000000106BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 106 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0037",
+      "record": "AYN000000109BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 109 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0038",
+      "record": "AYN000000112BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 112 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0039",
+      "record": "AYN000000115BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 115 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0040",
+      "record": "AYN000000118BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 118 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0041",
+      "record": "AYN000000121BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 121 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0042",
+      "record": "AYN000000124BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 124 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0043",
+      "record": "AYN000000127BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 127 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0044",
+      "record": "AYN000000130BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 130 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0045",
+      "record": "AYN000000133BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 133 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0046",
+      "record": "AYN000000136BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 136 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0047",
+      "record": "AYN000000139BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 139 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0048",
+      "record": "AYN000000142BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 142 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0049",
+      "record": "AYN000000145BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 145 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0050",
+      "record": "AYN000000148BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 148 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0051",
+      "record": "AYN000000151BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 151 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0052",
+      "record": "AYN000000154BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 154 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0053",
+      "record": "AYN000000157BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 157 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0054",
+      "record": "AYN000000160BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 160 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0055",
+      "record": "AYN000000163BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 163 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0056",
+      "record": "AYN000000166BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 166 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0057",
+      "record": "AYN000000169BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 169 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0058",
+      "record": "AYN000000172BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 172 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0059",
+      "record": "AYN000000175BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 175 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0060",
+      "record": "AYN000000178BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 178 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0061",
+      "record": "AYN000000181BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 181 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0062",
+      "record": "AYN000000184BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 184 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0063",
+      "record": "AYN000000187BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 187 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0064",
+      "record": "AYN000000190BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 190 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0065",
+      "record": "AYN000000193BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 193 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0066",
+      "record": "AYN000000196BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 196 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0067",
+      "record": "AYN000000199BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 199 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0068",
+      "record": "AYN000000202BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 202 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0069",
+      "record": "AYN000000205BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 205 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0070",
+      "record": "AYN000000208BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 208 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0071",
+      "record": "AYN000000211BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 211 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0072",
+      "record": "AYN000000214BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 214 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0073",
+      "record": "AYN000000217BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 217 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0074",
+      "record": "AYN000000220BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 220 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0075",
+      "record": "AYN000000223BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 223 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0076",
+      "record": "AYN000000226BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 226 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0077",
+      "record": "AYN000000229BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 229 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0078",
+      "record": "AYN000000232BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 232 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0079",
+      "record": "AYN000000235BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 235 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0080",
+      "record": "AYN000000238BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 238 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0081",
+      "record": "AYN000000241BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 241 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0082",
+      "record": "AYN000000244BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 244 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0083",
+      "record": "AYN000000247BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 247 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0084",
+      "record": "AYN000000250BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 250 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0085",
+      "record": "AYN000000253BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 253 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0086",
+      "record": "AYN000000256BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 256 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0087",
+      "record": "AYN000000259BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 259 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0088",
+      "record": "AYN000000262BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 262 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0089",
+      "record": "AYN000000265BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 265 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0090",
+      "record": "AYN000000268BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 268 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0091",
+      "record": "AYN000000271BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 271 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0092",
+      "record": "AYN000000274BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 274 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0093",
+      "record": "AYN000000277BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 277 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0094",
+      "record": "AYN000000280BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 280 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0095",
+      "record": "AYN000000283BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 283 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0096",
+      "record": "AYN000000286BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 286 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0097",
+      "record": "AYN000000289BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 289 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0098",
+      "record": "AYN000000292BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 292 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0099",
+      "record": "AYN000000295BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 295 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0100",
+      "record": "AYN000000298BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 298 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0101",
+      "record": "AYN000000301BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 301 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0102",
+      "record": "AYN000000304BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 304 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0103",
+      "record": "AYN000000307BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 307 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0104",
+      "record": "AYN000000310BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 310 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0105",
+      "record": "AYN000000313BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 313 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0106",
+      "record": "AYN000000316BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 316 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0107",
+      "record": "AYN000000319BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 319 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0108",
+      "record": "AYN000000322BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 322 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0109",
+      "record": "AYN000000325BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 325 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0110",
+      "record": "AYN000000328BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 328 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0111",
+      "record": "AYN000000331BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 331 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0112",
+      "record": "AYN000000334BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 334 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0113",
+      "record": "AYN000000337BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 337 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0114",
+      "record": "AYN000000340BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 340 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0115",
+      "record": "AYN000000343BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 343 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0116",
+      "record": "AYN000000346BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 346 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0117",
+      "record": "AYN000000349BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 349 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0118",
+      "record": "AYN000000352BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 352 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0119",
+      "record": "AYN000000355BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 355 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0120",
+      "record": "AYN000000358BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 358 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0121",
+      "record": "AYN000000361BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 361 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0122",
+      "record": "AYN000000364BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 364 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0123",
+      "record": "AYN000000367BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 367 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0124",
+      "record": "AYN000000370BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 370 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0125",
+      "record": "AYN000000373BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 373 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0126",
+      "record": "AYN000000376BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 376 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0127",
+      "record": "AYN000000379BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 379 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0128",
+      "record": "AYN000000382BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 382 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0129",
+      "record": "AYN000000385BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 385 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0130",
+      "record": "AYN000000388BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 388 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0131",
+      "record": "AYN000000391BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 391 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0132",
+      "record": "AYN000000394BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 394 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0133",
+      "record": "AYN000000397BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 397 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0134",
+      "record": "AYN000000400BRA00009234ACTIVE  USDEUR   .923420260101                                                                                                           ",
+      "why": "line 400 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0135",
+      "record": "AYN000000003BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 403 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0136",
+      "record": "AYN000000006BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 406 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0137",
+      "record": "AYN000000009BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 409 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0138",
+      "record": "AYN000000012BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 412 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0139",
+      "record": "AYN000000015BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 415 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0140",
+      "record": "AYN000000018BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 418 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0141",
+      "record": "AYN000000021BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 421 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0142",
+      "record": "AYN000000024BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 424 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0143",
+      "record": "AYN000000027BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 427 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0144",
+      "record": "AYN000000030BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 430 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0145",
+      "record": "AYN000000033BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 433 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0146",
+      "record": "AYN000000036BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 436 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0147",
+      "record": "AYN000000039BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 439 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0148",
+      "record": "AYN000000042BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 442 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0149",
+      "record": "AYN000000045BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 445 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0150",
+      "record": "AYN000000048BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 448 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0151",
+      "record": "AYN000000051BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 451 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0152",
+      "record": "AYN000000054BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 454 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0153",
+      "record": "AYN000000057BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 457 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0154",
+      "record": "AYN000000060BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 460 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0155",
+      "record": "AYN000000063BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 463 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0156",
+      "record": "AYN000000066BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 466 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0157",
+      "record": "AYN000000069BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 469 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0158",
+      "record": "AYN000000072BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 472 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0159",
+      "record": "AYN000000075BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 475 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0160",
+      "record": "AYN000000078BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 478 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0161",
+      "record": "AYN000000081BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 481 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0162",
+      "record": "AYN000000084BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 484 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0163",
+      "record": "AYN000000087BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 487 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0164",
+      "record": "AYN000000090BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 490 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0165",
+      "record": "AYN000000093BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 493 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0166",
+      "record": "AYN000000096BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 496 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0167",
+      "record": "AYN000000099BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 499 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0168",
+      "record": "AYN000000102BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 502 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0169",
+      "record": "AYN000000105BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 505 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0170",
+      "record": "AYN000000108BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 508 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0171",
+      "record": "AYN000000111BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 511 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0172",
+      "record": "AYN000000114BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 514 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0173",
+      "record": "AYN000000117BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 517 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0174",
+      "record": "AYN000000120BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 520 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0175",
+      "record": "AYN000000123BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 523 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0176",
+      "record": "AYN000000126BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 526 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0177",
+      "record": "AYN000000129BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 529 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0178",
+      "record": "AYN000000132BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 532 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0179",
+      "record": "AYN000000135BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 535 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0180",
+      "record": "AYN000000138BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 538 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0181",
+      "record": "AYN000000141BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 541 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0182",
+      "record": "AYN000000144BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 544 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0183",
+      "record": "AYN000000147BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 547 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0184",
+      "record": "AYN000000150BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 550 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0185",
+      "record": "AYN000000153BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 553 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0186",
+      "record": "AYN000000156BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 556 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0187",
+      "record": "AYN000000159BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 559 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0188",
+      "record": "AYN000000162BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 562 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0189",
+      "record": "AYN000000165BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 565 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0190",
+      "record": "AYN000000168BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 568 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0191",
+      "record": "AYN000000171BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 571 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0192",
+      "record": "AYN000000174BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 574 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0193",
+      "record": "AYN000000177BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 577 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0194",
+      "record": "AYN000000180BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 580 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0195",
+      "record": "AYN000000183BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 583 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0196",
+      "record": "AYN000000186BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 586 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0197",
+      "record": "AYN000000189BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 589 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0198",
+      "record": "AYN000000192BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 592 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0199",
+      "record": "AYN000000195BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 595 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0200",
+      "record": "AYN000000198BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 598 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0201",
+      "record": "AYN000000201BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 601 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0202",
+      "record": "AYN000000204BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 604 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0203",
+      "record": "AYN000000207BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 607 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0204",
+      "record": "AYN000000210BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 610 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0205",
+      "record": "AYN000000213BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 613 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0206",
+      "record": "AYN000000216BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 616 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0207",
+      "record": "AYN000000219BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 619 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0208",
+      "record": "AYN000000222BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 622 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0209",
+      "record": "AYN000000225BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 625 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0210",
+      "record": "AYN000000228BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 628 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0211",
+      "record": "AYN000000231BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 631 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0212",
+      "record": "AYN000000234BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 634 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0213",
+      "record": "AYN000000237BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 637 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0214",
+      "record": "AYN000000240BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 640 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0215",
+      "record": "AYN000000243BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 643 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0216",
+      "record": "AYN000000246BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 646 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0217",
+      "record": "AYN000000249BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 649 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0218",
+      "record": "AYN000000252BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 652 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0219",
+      "record": "AYN000000255BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 655 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0220",
+      "record": "AYN000000258BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 658 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0221",
+      "record": "AYN000000261BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 661 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0222",
+      "record": "AYN000000264BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 664 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0223",
+      "record": "AYN000000267BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 667 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0224",
+      "record": "AYN000000270BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 670 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0225",
+      "record": "AYN000000273BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 673 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0226",
+      "record": "AYN000000276BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 676 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0227",
+      "record": "AYN000000279BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 679 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0228",
+      "record": "AYN000000282BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 682 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0229",
+      "record": "AYN000000285BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 685 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0230",
+      "record": "AYN000000288BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 688 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0231",
+      "record": "AYN000000291BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 691 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0232",
+      "record": "AYN000000294BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 694 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0233",
+      "record": "AYN000000297BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 697 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0234",
+      "record": "AYN000000300BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 700 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0235",
+      "record": "AYN000000303BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 703 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0236",
+      "record": "AYN000000306BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 706 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0237",
+      "record": "AYN000000309BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 709 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0238",
+      "record": "AYN000000312BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 712 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0239",
+      "record": "AYN000000315BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 715 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0240",
+      "record": "AYN000000318BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 718 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0241",
+      "record": "AYN000000321BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 721 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0242",
+      "record": "AYN000000324BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 724 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0243",
+      "record": "AYN000000327BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 727 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0244",
+      "record": "AYN000000330BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 730 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0245",
+      "record": "AYN000000333BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 733 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0246",
+      "record": "AYN000000336BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 736 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0247",
+      "record": "AYN000000339BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 739 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0248",
+      "record": "AYN000000342BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 742 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0249",
+      "record": "AYN000000345BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 745 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0250",
+      "record": "AYN000000348BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 748 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0251",
+      "record": "AYN000000351BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 751 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0252",
+      "record": "AYN000000354BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 754 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0253",
+      "record": "AYN000000357BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 757 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0254",
+      "record": "AYN000000360BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 760 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0255",
+      "record": "AYN000000363BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 763 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0256",
+      "record": "AYN000000366BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 766 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0257",
+      "record": "AYN000000369BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 769 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0258",
+      "record": "AYN000000372BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 772 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0259",
+      "record": "AYN000000375BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 775 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0260",
+      "record": "AYN000000378BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 778 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0261",
+      "record": "AYN000000381BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 781 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0262",
+      "record": "AYN000000384BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 784 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0263",
+      "record": "AYN000000387BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 787 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0264",
+      "record": "AYN000000390BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 790 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0265",
+      "record": "AYN000000393BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 793 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0266",
+      "record": "AYN000000396BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 796 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0267",
+      "record": "AYN000000399BRA00007912ACTIVE  USDGBP   .791220260101                                                                                                           ",
+      "why": "line 799 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0268",
+      "record": "AYN000000002BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 802 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0269",
+      "record": "AYN000000005BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 805 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0270",
+      "record": "AYN000000008BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 808 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0271",
+      "record": "AYN000000011BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 811 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0272",
+      "record": "AYN000000014BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 814 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0273",
+      "record": "AYN000000017BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 817 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0274",
+      "record": "AYN000000020BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 820 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0275",
+      "record": "AYN000000023BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 823 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0276",
+      "record": "AYN000000026BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 826 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0277",
+      "record": "AYN000000029BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 829 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0278",
+      "record": "AYN000000032BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 832 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0279",
+      "record": "AYN000000035BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 835 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0280",
+      "record": "AYN000000038BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 838 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0281",
+      "record": "AYN000000041BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 841 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0282",
+      "record": "AYN000000044BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 844 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0283",
+      "record": "AYN000000047BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 847 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0284",
+      "record": "AYN000000050BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 850 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0285",
+      "record": "AYN000000053BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 853 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0286",
+      "record": "AYN000000056BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 856 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0287",
+      "record": "AYN000000059BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 859 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0288",
+      "record": "AYN000000062BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 862 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0289",
+      "record": "AYN000000065BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 865 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0290",
+      "record": "AYN000000068BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 868 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0291",
+      "record": "AYN000000071BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 871 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0292",
+      "record": "AYN000000074BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 874 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0293",
+      "record": "AYN000000077BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 877 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0294",
+      "record": "AYN000000080BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 880 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0295",
+      "record": "AYN000000083BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 883 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0296",
+      "record": "AYN000000086BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 886 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0297",
+      "record": "AYN000000089BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 889 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0298",
+      "record": "AYN000000092BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 892 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0299",
+      "record": "AYN000000095BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 895 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0300",
+      "record": "AYN000000098BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 898 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0301",
+      "record": "AYN000000101BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 901 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0302",
+      "record": "AYN000000104BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 904 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0303",
+      "record": "AYN000000107BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 907 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0304",
+      "record": "AYN000000110BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 910 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0305",
+      "record": "AYN000000113BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 913 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0306",
+      "record": "AYN000000116BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 916 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0307",
+      "record": "AYN000000119BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 919 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0308",
+      "record": "AYN000000122BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 922 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0309",
+      "record": "AYN000000125BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 925 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0310",
+      "record": "AYN000000128BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 928 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0311",
+      "record": "AYN000000131BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 931 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0312",
+      "record": "AYN000000134BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 934 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0313",
+      "record": "AYN000000137BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 937 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0314",
+      "record": "AYN000000140BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 940 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0315",
+      "record": "AYN000000143BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 943 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0316",
+      "record": "AYN000000146BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 946 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0317",
+      "record": "AYN000000149BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 949 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0318",
+      "record": "AYN000000152BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 952 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0319",
+      "record": "AYN000000155BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 955 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0320",
+      "record": "AYN000000158BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 958 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0321",
+      "record": "AYN000000161BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 961 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0322",
+      "record": "AYN000000164BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 964 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0323",
+      "record": "AYN000000167BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 967 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0324",
+      "record": "AYN000000170BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 970 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0325",
+      "record": "AYN000000173BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 973 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0326",
+      "record": "AYN000000176BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 976 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0327",
+      "record": "AYN000000179BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 979 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0328",
+      "record": "AYN000000182BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 982 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0329",
+      "record": "AYN000000185BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 985 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0330",
+      "record": "AYN000000188BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 988 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0331",
+      "record": "AYN000000191BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 991 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0332",
+      "record": "AYN000000194BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 994 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0333",
+      "record": "AYN000000197BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 997 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0334",
+      "record": "AYN000000200BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1000 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0335",
+      "record": "AYN000000203BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1003 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0336",
+      "record": "AYN000000206BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1006 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0337",
+      "record": "AYN000000209BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1009 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0338",
+      "record": "AYN000000212BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1012 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0339",
+      "record": "AYN000000215BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1015 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0340",
+      "record": "AYN000000218BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1018 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0341",
+      "record": "AYN000000221BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1021 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0342",
+      "record": "AYN000000224BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1024 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0343",
+      "record": "AYN000000227BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1027 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0344",
+      "record": "AYN000000230BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1030 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0345",
+      "record": "AYN000000233BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1033 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0346",
+      "record": "AYN000000236BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1036 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0347",
+      "record": "AYN000000239BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1039 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0348",
+      "record": "AYN000000242BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1042 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0349",
+      "record": "AYN000000245BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1045 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0350",
+      "record": "AYN000000248BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1048 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0351",
+      "record": "AYN000000251BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1051 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0352",
+      "record": "AYN000000254BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1054 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0353",
+      "record": "AYN000000257BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1057 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0354",
+      "record": "AYN000000260BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1060 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0355",
+      "record": "AYN000000263BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1063 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0356",
+      "record": "AYN000000266BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1066 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0357",
+      "record": "AYN000000269BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1069 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0358",
+      "record": "AYN000000272BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1072 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0359",
+      "record": "AYN000000275BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1075 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0360",
+      "record": "AYN000000278BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1078 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0361",
+      "record": "AYN000000281BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1081 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0362",
+      "record": "AYN000000284BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1084 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0363",
+      "record": "AYN000000287BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1087 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0364",
+      "record": "AYN000000290BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1090 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0365",
+      "record": "AYN000000293BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1093 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0366",
+      "record": "AYN000000296BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1096 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0367",
+      "record": "AYN000000299BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1099 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0368",
+      "record": "AYN000000302BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1102 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0369",
+      "record": "AYN000000305BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1105 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0370",
+      "record": "AYN000000308BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1108 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0371",
+      "record": "AYN000000311BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1111 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0372",
+      "record": "AYN000000314BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1114 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0373",
+      "record": "AYN000000317BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1117 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0374",
+      "record": "AYN000000320BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1120 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0375",
+      "record": "AYN000000323BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1123 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0376",
+      "record": "AYN000000326BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1126 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0377",
+      "record": "AYN000000329BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1129 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0378",
+      "record": "AYN000000332BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1132 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0379",
+      "record": "AYN000000335BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1135 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0380",
+      "record": "AYN000000338BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1138 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0381",
+      "record": "AYN000000341BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1141 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0382",
+      "record": "AYN000000344BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1144 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0383",
+      "record": "AYN000000347BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1147 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0384",
+      "record": "AYN000000350BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1150 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0385",
+      "record": "AYN000000353BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1153 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0386",
+      "record": "AYN000000356BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1156 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0387",
+      "record": "AYN000000359BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1159 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0388",
+      "record": "AYN000000362BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1162 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0389",
+      "record": "AYN000000365BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1165 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0390",
+      "record": "AYN000000368BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1168 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0391",
+      "record": "AYN000000371BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1171 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0392",
+      "record": "AYN000000374BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1174 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0393",
+      "record": "AYN000000377BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1177 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0394",
+      "record": "AYN000000380BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1180 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0395",
+      "record": "AYN000000383BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1183 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0396",
+      "record": "AYN000000386BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1186 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0397",
+      "record": "AYN000000389BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1189 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0398",
+      "record": "AYN000000392BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1192 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0399",
+      "record": "AYN000000395BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1195 of app/data/ascii/fx-rates.dat in the imported repository"
+    },
+    {
+      "id": "repo-0400",
+      "record": "AYN000000398BRA01492500ACTIVE  USDJPY149.250020260101                                                                                                           ",
+      "why": "line 1198 of app/data/ascii/fx-rates.dat in the imported repository"
+    }
+  ],
+  "standIns": [
+    "CEE3ABD"
+  ],
+  "import": {
+    "repository": "https://github.com/Nivetha200111/harbor-trust-mainframe",
+    "commit": "cee9da8c58771d66f16fa716d55f02cae2bf81c3",
+    "path": "app/cbl/HTFXCONV.cbl",
+    "job": "app/jcl/HTFXCONV.jcl"
+  }
+}

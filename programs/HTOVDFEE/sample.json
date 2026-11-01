@@ -1,0 +1,2058 @@
+{
+  "name": "htovdfee",
+  "description": "Imported from https://github.com/Nivetha200111/harbor-trust-mainframe at cee9da8c5877",
+  "program": "HTOVDFEE",
+  "source": "src/HTOVDFEE.cbl",
+  "modules": [
+    "src/HTFEEP.cbl",
+    "src/HTAUDT.cbl",
+    "src/HTPOST.cbl"
+  ],
+  "collation": "ebcdic",
+  "copybookDir": "copybooks",
+  "dd": {
+    "input": "INPUT-FILE",
+    "output": "OUTPUT-FILE"
+  },
+  "javaConversion": {
+    "dir": "java-conversion",
+    "mainClass": "Htovdfee",
+    "origin": "none yet: translate with the converter's run command"
+  },
+  "layoutsNote": "Derived from the copybooks by services/analyzer.",
+  "layouts": {
+    "input": {
+      "record": "IN-RECORD",
+      "fields": [
+        {
+          "name": "IN-RECORD",
+          "kind": "alnum",
+          "length": 160
+        }
+      ],
+      "format": "line"
+    },
+    "output": {
+      "record": "OUT-RECORD",
+      "fields": [
+        {
+          "name": "OUT-RECORD",
+          "kind": "alnum",
+          "length": 200
+        }
+      ],
+      "format": "line"
+    }
+  },
+  "fixtureCases": [
+    {
+      "id": "repo-0001",
+      "record": "TYN000000001BRB00007919DORMANT TOK00000120260228                                                                       N                                        ",
+      "why": "line 1 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0002",
+      "record": "TYN000000004BRE00031676DORMANT TOK00000420261231                                                                       N                                        ",
+      "why": "line 4 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0003",
+      "record": "TYN000000007BRH00055433DORMANT TOK00000720251130                                                                       N                                        ",
+      "why": "line 7 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0004",
+      "record": "TYN000000010BRK00079190DORMANT TOK00001020240131                                                                       N                                        ",
+      "why": "line 10 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0005",
+      "record": "TYN000000013BRN00102947DORMANT TOK00001320260228                                                                       N                                        ",
+      "why": "line 13 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0006",
+      "record": "TYN000000016BRQ00126704DORMANT TOK00001620261231                                                                       N                                        ",
+      "why": "line 16 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0007",
+      "record": "TYN000000019BRT00150461DORMANT TOK00001920251130                                                                       N                                        ",
+      "why": "line 19 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0008",
+      "record": "TYN000000022BRW00174218DORMANT TOK00002220240131                                                                       N                                        ",
+      "why": "line 22 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0009",
+      "record": "TYN000000025BRZ00197975DORMANT TOK00002520260228                                                                       N                                        ",
+      "why": "line 25 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0010",
+      "record": "TYN000000028BRC00221732DORMANT TOK00002820261231                                                                       N                                        ",
+      "why": "line 28 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0011",
+      "record": "TYN000000031BRF00245489DORMANT TOK00003120251130                                                                       N                                        ",
+      "why": "line 31 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0012",
+      "record": "TYN000000034BRI00269246DORMANT TOK00003420240131                                                                       N                                        ",
+      "why": "line 34 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0013",
+      "record": "TYN000000037BRL00293003DORMANT TOK00003720260228                                                                       N                                        ",
+      "why": "line 37 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0014",
+      "record": "TYN000000040BRO00316760DORMANT TOK00004020261231                                                                       N                                        ",
+      "why": "line 40 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0015",
+      "record": "TYN000000043BRR00340517DORMANT TOK00004320251130                                                                       N                                        ",
+      "why": "line 43 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0016",
+      "record": "TYN000000046BRU00364274DORMANT TOK00004620240131                                                                       N                                        ",
+      "why": "line 46 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0017",
+      "record": "TYN000000049BRX00388031DORMANT TOK00004920260228                                                                       N                                        ",
+      "why": "line 49 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0018",
+      "record": "TYN000000052BRA00411788DORMANT TOK00005220261231                                                                       N                                        ",
+      "why": "line 52 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0019",
+      "record": "TYN000000055BRD00435545DORMANT TOK00005520251130                                                                       N                                        ",
+      "why": "line 55 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0020",
+      "record": "TYN000000058BRG00459302DORMANT TOK00005820240131                                                                       N                                        ",
+      "why": "line 58 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0021",
+      "record": "TYN000000061BRJ00483059DORMANT TOK00006120260228                                                                       N                                        ",
+      "why": "line 61 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0022",
+      "record": "TYN000000064BRM00506816DORMANT TOK00006420261231                                                                       N                                        ",
+      "why": "line 64 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0023",
+      "record": "TYN000000067BRP00530573DORMANT TOK00006720251130                                                                       N                                        ",
+      "why": "line 67 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0024",
+      "record": "TYN000000070BRS00554330DORMANT TOK00007020240131                                                                       N                                        ",
+      "why": "line 70 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0025",
+      "record": "TYN000000073BRV00578087DORMANT TOK00007320260228                                                                       N                                        ",
+      "why": "line 73 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0026",
+      "record": "TYN000000076BRY00601844DORMANT TOK00007620261231                                                                       N                                        ",
+      "why": "line 76 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0027",
+      "record": "TYN000000079BRB00625601DORMANT TOK00007920251130                                                                       N                                        ",
+      "why": "line 79 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0028",
+      "record": "TYN000000082BRE00649358DORMANT TOK00008220240131                                                                       N                                        ",
+      "why": "line 82 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0029",
+      "record": "TYN000000085BRH00673115DORMANT TOK00008520260228                                                                       N                                        ",
+      "why": "line 85 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0030",
+      "record": "TYN000000088BRK00696872DORMANT TOK00008820261231                                                                       N                                        ",
+      "why": "line 88 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0031",
+      "record": "TYN000000091BRN00720629DORMANT TOK00009120251130                                                                       N                                        ",
+      "why": "line 91 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0032",
+      "record": "TYN000000094BRQ00744386DORMANT TOK00009420240131                                                                       N                                        ",
+      "why": "line 94 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0033",
+      "record": "TYN000000097BRT00768143DORMANT TOK00009720260228                                                                       N                                        ",
+      "why": "line 97 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0034",
+      "record": "TYN000000100BRW00791900DORMANT TOK00010020261231                                                                       N                                        ",
+      "why": "line 100 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0035",
+      "record": "TYN000000103BRZ00815657DORMANT TOK00010320251130                                                                       N                                        ",
+      "why": "line 103 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0036",
+      "record": "TYN000000106BRC00839414DORMANT TOK00010620240131                                                                       N                                        ",
+      "why": "line 106 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0037",
+      "record": "TYN000000109BRF00863171DORMANT TOK00010920260228                                                                       N                                        ",
+      "why": "line 109 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0038",
+      "record": "TYN000000112BRI00886928DORMANT TOK00011220261231                                                                       N                                        ",
+      "why": "line 112 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0039",
+      "record": "TYN000000115BRL00910685DORMANT TOK00011520251130                                                                       N                                        ",
+      "why": "line 115 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0040",
+      "record": "TYN000000118BRO00934442DORMANT TOK00011820240131                                                                       N                                        ",
+      "why": "line 118 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0041",
+      "record": "TYN000000121BRR00958199DORMANT TOK00012120260228                                                                       N                                        ",
+      "why": "line 121 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0042",
+      "record": "TYN000000124BRU00981956DORMANT TOK00012420261231                                                                       N                                        ",
+      "why": "line 124 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0043",
+      "record": "TYN000000127BRX01005713DORMANT TOK00012720251130                                                                       N                                        ",
+      "why": "line 127 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0044",
+      "record": "TYN000000130BRA01029470DORMANT TOK00013020240131                                                                       N                                        ",
+      "why": "line 130 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0045",
+      "record": "TYN000000133BRD01053227DORMANT TOK00013320260228                                                                       N                                        ",
+      "why": "line 133 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0046",
+      "record": "TYN000000136BRG01076984DORMANT TOK00013620261231                                                                       N                                        ",
+      "why": "line 136 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0047",
+      "record": "TYN000000139BRJ01100741DORMANT TOK00013920251130                                                                       N                                        ",
+      "why": "line 139 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0048",
+      "record": "TYN000000142BRM01124498DORMANT TOK00014220240131                                                                       N                                        ",
+      "why": "line 142 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0049",
+      "record": "TYN000000145BRP01148255DORMANT TOK00014520260228                                                                       N                                        ",
+      "why": "line 145 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0050",
+      "record": "TYN000000148BRS01172012DORMANT TOK00014820261231                                                                       N                                        ",
+      "why": "line 148 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0051",
+      "record": "TYN000000151BRV01195769DORMANT TOK00015120251130                                                                       N                                        ",
+      "why": "line 151 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0052",
+      "record": "TYN000000154BRY01219526DORMANT TOK00015420240131                                                                       N                                        ",
+      "why": "line 154 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0053",
+      "record": "TYN000000157BRB01243283DORMANT TOK00015720260228                                                                       N                                        ",
+      "why": "line 157 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0054",
+      "record": "TYN000000160BRE01267040DORMANT TOK00016020261231                                                                       N                                        ",
+      "why": "line 160 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0055",
+      "record": "TYN000000163BRH01290797DORMANT TOK00016320251130                                                                       N                                        ",
+      "why": "line 163 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0056",
+      "record": "TYN000000166BRK01314554DORMANT TOK00016620240131                                                                       N                                        ",
+      "why": "line 166 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0057",
+      "record": "TYN000000169BRN01338311DORMANT TOK00016920260228                                                                       N                                        ",
+      "why": "line 169 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0058",
+      "record": "TYN000000172BRQ01362068DORMANT TOK00017220261231                                                                       N                                        ",
+      "why": "line 172 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0059",
+      "record": "TYN000000175BRT01385825DORMANT TOK00017520251130                                                                       N                                        ",
+      "why": "line 175 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0060",
+      "record": "TYN000000178BRW01409582DORMANT TOK00017820240131                                                                       Y                                        ",
+      "why": "line 178 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0061",
+      "record": "TYN000000181BRZ01433339DORMANT TOK00018120260228                                                                       N                                        ",
+      "why": "line 181 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0062",
+      "record": "TYN000000184BRC01457096DORMANT TOK00018420261231                                                                       N                                        ",
+      "why": "line 184 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0063",
+      "record": "TYN000000187BRF01480853DORMANT TOK00018720251130                                                                       N                                        ",
+      "why": "line 187 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0064",
+      "record": "TYN000000190BRI01504610DORMANT TOK00019020240131                                                                       N                                        ",
+      "why": "line 190 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0065",
+      "record": "TYN000000193BRL01528367DORMANT TOK00019320260228                                                                       N                                        ",
+      "why": "line 193 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0066",
+      "record": "TYN000000196BRO01552124DORMANT TOK00019620261231                                                                       N                                        ",
+      "why": "line 196 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0067",
+      "record": "TYN000000199BRR01575881DORMANT TOK00019920251130                                                                       N                                        ",
+      "why": "line 199 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0068",
+      "record": "TYN000000202BRU01599638DORMANT TOK00020220240131                                                                       N                                        ",
+      "why": "line 202 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0069",
+      "record": "TYN000000205BRX01623395DORMANT TOK00020520260228                                                                       N                                        ",
+      "why": "line 205 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0070",
+      "record": "TYN000000208BRA01647152DORMANT TOK00020820261231                                                                       N                                        ",
+      "why": "line 208 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0071",
+      "record": "TYN000000211BRD01670909DORMANT TOK00021120251130                                                                       N                                        ",
+      "why": "line 211 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0072",
+      "record": "TYN000000214BRG01694666DORMANT TOK00021420240131                                                                       N                                        ",
+      "why": "line 214 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0073",
+      "record": "TYN000000217BRJ01718423DORMANT TOK00021720260228                                                                       N                                        ",
+      "why": "line 217 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0074",
+      "record": "TYN000000220BRM01742180DORMANT TOK00022020261231                                                                       N                                        ",
+      "why": "line 220 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0075",
+      "record": "TYN000000223BRP01765937DORMANT TOK00022320251130                                                                       N                                        ",
+      "why": "line 223 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0076",
+      "record": "TYN000000226BRS01789694DORMANT TOK00022620240131                                                                       N                                        ",
+      "why": "line 226 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0077",
+      "record": "TYN000000229BRV01813451DORMANT TOK00022920260228                                                                       N                                        ",
+      "why": "line 229 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0078",
+      "record": "TYN000000232BRY01837208DORMANT TOK00023220261231                                                                       N                                        ",
+      "why": "line 232 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0079",
+      "record": "TYN000000235BRB01860965DORMANT TOK00023520251130                                                                       N                                        ",
+      "why": "line 235 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0080",
+      "record": "TYN000000238BRE01884722DORMANT TOK00023820240131                                                                       N                                        ",
+      "why": "line 238 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0081",
+      "record": "TYN000000241BRH01908479DORMANT TOK00024120260228                                                                       N                                        ",
+      "why": "line 241 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0082",
+      "record": "TYN000000244BRK01932236DORMANT TOK00024420261231                                                                       N                                        ",
+      "why": "line 244 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0083",
+      "record": "TYN000000247BRN01955993DORMANT TOK00024720251130                                                                       N                                        ",
+      "why": "line 247 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0084",
+      "record": "TYN000000250BRQ01979750DORMANT TOK00025020240131                                                                       N                                        ",
+      "why": "line 250 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0085",
+      "record": "TYN000000253BRT02003507DORMANT TOK00025320260228                                                                       N                                        ",
+      "why": "line 253 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0086",
+      "record": "TYN000000256BRW02027264DORMANT TOK00025620261231                                                                       N                                        ",
+      "why": "line 256 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0087",
+      "record": "TYN000000259BRZ02051021DORMANT TOK00025920251130                                                                       N                                        ",
+      "why": "line 259 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0088",
+      "record": "TYN000000262BRC02074778DORMANT TOK00026220240131                                                                       N                                        ",
+      "why": "line 262 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0089",
+      "record": "TYN000000265BRF02098535DORMANT TOK00026520260228                                                                       N                                        ",
+      "why": "line 265 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0090",
+      "record": "TYN000000268BRI02122292DORMANT TOK00026820261231                                                                       N                                        ",
+      "why": "line 268 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0091",
+      "record": "TYN000000271BRL02146049DORMANT TOK00027120251130                                                                       N                                        ",
+      "why": "line 271 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0092",
+      "record": "TYN000000274BRO02169806DORMANT TOK00027420240131                                                                       N                                        ",
+      "why": "line 274 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0093",
+      "record": "TYN000000277BRR02193563DORMANT TOK00027720260228                                                                       N                                        ",
+      "why": "line 277 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0094",
+      "record": "TYN000000280BRU02217320DORMANT TOK00028020261231                                                                       N                                        ",
+      "why": "line 280 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0095",
+      "record": "TYN000000283BRX02241077DORMANT TOK00028320251130                                                                       N                                        ",
+      "why": "line 283 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0096",
+      "record": "TYN000000286BRA02264834DORMANT TOK00028620240131                                                                       N                                        ",
+      "why": "line 286 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0097",
+      "record": "TYN000000289BRD02288591DORMANT TOK00028920260228                                                                       N                                        ",
+      "why": "line 289 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0098",
+      "record": "TYN000000292BRG02312348DORMANT TOK00029220261231                                                                       N                                        ",
+      "why": "line 292 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0099",
+      "record": "TYN000000295BRJ02336105DORMANT TOK00029520251130                                                                       N                                        ",
+      "why": "line 295 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0100",
+      "record": "TYN000000298BRM02359862DORMANT TOK00029820240131                                                                       N                                        ",
+      "why": "line 298 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0101",
+      "record": "TYN000000301BRP02383619DORMANT TOK00030120260228                                                                       N                                        ",
+      "why": "line 301 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0102",
+      "record": "TYN000000304BRS02407376DORMANT TOK00030420261231                                                                       N                                        ",
+      "why": "line 304 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0103",
+      "record": "TYN000000307BRV02431133DORMANT TOK00030720251130                                                                       N                                        ",
+      "why": "line 307 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0104",
+      "record": "TYN000000310BRY02454890DORMANT TOK00031020240131                                                                       N                                        ",
+      "why": "line 310 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0105",
+      "record": "TYN000000313BRB02478647DORMANT TOK00031320260228                                                                       N                                        ",
+      "why": "line 313 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0106",
+      "record": "TYN000000316BRE02502404DORMANT TOK00031620261231                                                                       N                                        ",
+      "why": "line 316 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0107",
+      "record": "TYN000000319BRH02526161DORMANT TOK00031920251130                                                                       N                                        ",
+      "why": "line 319 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0108",
+      "record": "TYN000000322BRK02549918DORMANT TOK00032220240131                                                                       N                                        ",
+      "why": "line 322 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0109",
+      "record": "TYN000000325BRN02573675DORMANT TOK00032520260228                                                                       N                                        ",
+      "why": "line 325 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0110",
+      "record": "TYN000000328BRQ02597432DORMANT TOK00032820261231                                                                       N                                        ",
+      "why": "line 328 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0111",
+      "record": "TYN000000331BRT02621189DORMANT TOK00033120251130                                                                       N                                        ",
+      "why": "line 331 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0112",
+      "record": "TYN000000334BRW02644946DORMANT TOK00033420240131                                                                       N                                        ",
+      "why": "line 334 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0113",
+      "record": "TYN000000337BRZ02668703DORMANT TOK00033720260228                                                                       N                                        ",
+      "why": "line 337 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0114",
+      "record": "TYN000000340BRC02692460DORMANT TOK00034020261231                                                                       N                                        ",
+      "why": "line 340 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0115",
+      "record": "TYN000000343BRF02716217DORMANT TOK00034320251130                                                                       N                                        ",
+      "why": "line 343 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0116",
+      "record": "TYN000000346BRI02739974DORMANT TOK00034620240131                                                                       N                                        ",
+      "why": "line 346 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0117",
+      "record": "TYN000000349BRL02763731DORMANT TOK00034920260228                                                                       N                                        ",
+      "why": "line 349 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0118",
+      "record": "TYN000000352BRO02787488DORMANT TOK00035220261231                                                                       N                                        ",
+      "why": "line 352 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0119",
+      "record": "TYN000000355BRR02811245DORMANT TOK00035520251130                                                                       N                                        ",
+      "why": "line 355 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0120",
+      "record": "TYN000000358BRU02835002DORMANT TOK00035820240131                                                                       N                                        ",
+      "why": "line 358 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0121",
+      "record": "TYN000000361BRX02858759DORMANT TOK00036120260228                                                                       N                                        ",
+      "why": "line 361 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0122",
+      "record": "TYN000000364BRA02882516DORMANT TOK00036420261231                                                                       N                                        ",
+      "why": "line 364 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0123",
+      "record": "TYN000000367BRD02906273DORMANT TOK00036720251130                                                                       N                                        ",
+      "why": "line 367 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0124",
+      "record": "TYN000000370BRG02930030DORMANT TOK00037020240131                                                                       N                                        ",
+      "why": "line 370 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0125",
+      "record": "TYN000000373BRJ02953787DORMANT TOK00037320260228                                                                       N                                        ",
+      "why": "line 373 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0126",
+      "record": "TYN000000376BRM02977544DORMANT TOK00037620261231                                                                       N                                        ",
+      "why": "line 376 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0127",
+      "record": "TYN000000379BRP03001301DORMANT TOK00037920251130                                                                       N                                        ",
+      "why": "line 379 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0128",
+      "record": "TYN000000382BRS03025058DORMANT TOK00038220240131                                                                       N                                        ",
+      "why": "line 382 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0129",
+      "record": "TYN000000385BRV03048815DORMANT TOK00038520260228                                                                       N                                        ",
+      "why": "line 385 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0130",
+      "record": "TYN000000388BRY03072572DORMANT TOK00038820261231                                                                       N                                        ",
+      "why": "line 388 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0131",
+      "record": "TYN000000391BRB03096329DORMANT TOK00039120251130                                                                       N                                        ",
+      "why": "line 391 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0132",
+      "record": "TYN000000394BRE03120086DORMANT TOK00039420240131                                                                       N                                        ",
+      "why": "line 394 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0133",
+      "record": "TYN000000397BRH03143843DORMANT TOK00039720260228                                                                       N                                        ",
+      "why": "line 397 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0134",
+      "record": "TYN000000400BRK03167600DORMANT TOK00040020261231                                                                       N                                        ",
+      "why": "line 400 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0135",
+      "record": "TYN000000403BRN03191357DORMANT TOK00040320251130                                                                       N                                        ",
+      "why": "line 403 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0136",
+      "record": "TYN000000406BRQ03215114DORMANT TOK00040620240131                                                                       N                                        ",
+      "why": "line 406 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0137",
+      "record": "TYN000000409BRT03238871DORMANT TOK00040920260228                                                                       N                                        ",
+      "why": "line 409 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0138",
+      "record": "TYN000000412BRW03262628DORMANT TOK00041220261231                                                                       N                                        ",
+      "why": "line 412 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0139",
+      "record": "TYN000000415BRZ03286385DORMANT TOK00041520251130                                                                       N                                        ",
+      "why": "line 415 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0140",
+      "record": "TYN000000418BRC03310142DORMANT TOK00041820240131                                                                       N                                        ",
+      "why": "line 418 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0141",
+      "record": "TYN000000421BRF03333899DORMANT TOK00042120260228                                                                       N                                        ",
+      "why": "line 421 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0142",
+      "record": "TYN000000424BRI03357656DORMANT TOK00042420261231                                                                       N                                        ",
+      "why": "line 424 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0143",
+      "record": "TYN000000427BRL03381413DORMANT TOK00042720251130                                                                       N                                        ",
+      "why": "line 427 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0144",
+      "record": "TYN000000430BRO03405170DORMANT TOK00043020240131                                                                       N                                        ",
+      "why": "line 430 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0145",
+      "record": "TYN000000433BRR03428927DORMANT TOK00043320260228                                                                       N                                        ",
+      "why": "line 433 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0146",
+      "record": "TYN000000436BRU03452684DORMANT TOK00043620261231                                                                       N                                        ",
+      "why": "line 436 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0147",
+      "record": "TYN000000439BRX03476441DORMANT TOK00043920251130                                                                       N                                        ",
+      "why": "line 439 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0148",
+      "record": "TYN000000442BRA03500198DORMANT TOK00044220240131                                                                       N                                        ",
+      "why": "line 442 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0149",
+      "record": "TYN000000445BRD03523955DORMANT TOK00044520260228                                                                       Y                                        ",
+      "why": "line 445 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0150",
+      "record": "TYN000000448BRG03547712DORMANT TOK00044820261231                                                                       N                                        ",
+      "why": "line 448 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0151",
+      "record": "TYN000000451BRJ03571469DORMANT TOK00045120251130                                                                       N                                        ",
+      "why": "line 451 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0152",
+      "record": "TYN000000454BRM03595226DORMANT TOK00045420240131                                                                       N                                        ",
+      "why": "line 454 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0153",
+      "record": "TYN000000457BRP03618983DORMANT TOK00045720260228                                                                       N                                        ",
+      "why": "line 457 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0154",
+      "record": "TYN000000460BRS03642740DORMANT TOK00046020261231                                                                       N                                        ",
+      "why": "line 460 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0155",
+      "record": "TYN000000463BRV03666497DORMANT TOK00046320251130                                                                       N                                        ",
+      "why": "line 463 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0156",
+      "record": "TYN000000466BRY03690254DORMANT TOK00046620240131                                                                       N                                        ",
+      "why": "line 466 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0157",
+      "record": "TYN000000469BRB03714011DORMANT TOK00046920260228                                                                       N                                        ",
+      "why": "line 469 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0158",
+      "record": "TYN000000472BRE03737768DORMANT TOK00047220261231                                                                       N                                        ",
+      "why": "line 472 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0159",
+      "record": "TYN000000475BRH03761525DORMANT TOK00047520251130                                                                       N                                        ",
+      "why": "line 475 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0160",
+      "record": "TYN000000478BRK03785282DORMANT TOK00047820240131                                                                       N                                        ",
+      "why": "line 478 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0161",
+      "record": "TYN000000481BRN03809039DORMANT TOK00048120260228                                                                       N                                        ",
+      "why": "line 481 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0162",
+      "record": "TYN000000484BRQ03832796DORMANT TOK00048420261231                                                                       N                                        ",
+      "why": "line 484 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0163",
+      "record": "TYN000000487BRT03856553DORMANT TOK00048720251130                                                                       N                                        ",
+      "why": "line 487 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0164",
+      "record": "TYN000000490BRW03880310DORMANT TOK00049020240131                                                                       N                                        ",
+      "why": "line 490 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0165",
+      "record": "TYN000000493BRZ03904067DORMANT TOK00049320260228                                                                       N                                        ",
+      "why": "line 493 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0166",
+      "record": "TYN000000496BRC03927824DORMANT TOK00049620261231                                                                       N                                        ",
+      "why": "line 496 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0167",
+      "record": "TYN000000499BRF03951581DORMANT TOK00049920251130                                                                       N                                        ",
+      "why": "line 499 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0168",
+      "record": "TYN000000502BRI03975338DORMANT TOK00050220240131                                                                       N                                        ",
+      "why": "line 502 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0169",
+      "record": "TYN000000505BRL03999095DORMANT TOK00050520260228                                                                       N                                        ",
+      "why": "line 505 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0170",
+      "record": "TYN000000508BRO04022852DORMANT TOK00050820261231                                                                       N                                        ",
+      "why": "line 508 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0171",
+      "record": "TYN000000511BRR04046609DORMANT TOK00051120251130                                                                       N                                        ",
+      "why": "line 511 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0172",
+      "record": "TYN000000514BRU04070366DORMANT TOK00051420240131                                                                       N                                        ",
+      "why": "line 514 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0173",
+      "record": "TYN000000517BRX04094123DORMANT TOK00051720260228                                                                       N                                        ",
+      "why": "line 517 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0174",
+      "record": "TYN000000520BRA04117880DORMANT TOK00052020261231                                                                       N                                        ",
+      "why": "line 520 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0175",
+      "record": "TYN000000523BRD04141637DORMANT TOK00052320251130                                                                       N                                        ",
+      "why": "line 523 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0176",
+      "record": "TYN000000526BRG04165394DORMANT TOK00052620240131                                                                       N                                        ",
+      "why": "line 526 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0177",
+      "record": "TYN000000529BRJ04189151DORMANT TOK00052920260228                                                                       N                                        ",
+      "why": "line 529 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0178",
+      "record": "TYN000000532BRM04212908DORMANT TOK00053220261231                                                                       N                                        ",
+      "why": "line 532 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0179",
+      "record": "TYN000000535BRP04236665DORMANT TOK00053520251130                                                                       N                                        ",
+      "why": "line 535 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0180",
+      "record": "TYN000000538BRS04260422DORMANT TOK00053820240131                                                                       N                                        ",
+      "why": "line 538 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0181",
+      "record": "TYN000000541BRV04284179DORMANT TOK00054120260228                                                                       N                                        ",
+      "why": "line 541 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0182",
+      "record": "TYN000000544BRY04307936DORMANT TOK00054420261231                                                                       N                                        ",
+      "why": "line 544 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0183",
+      "record": "TYN000000547BRB04331693DORMANT TOK00054720251130                                                                       N                                        ",
+      "why": "line 547 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0184",
+      "record": "TYN000000550BRE04355450DORMANT TOK00055020240131                                                                       N                                        ",
+      "why": "line 550 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0185",
+      "record": "TYN000000553BRH04379207DORMANT TOK00055320260228                                                                       N                                        ",
+      "why": "line 553 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0186",
+      "record": "TYN000000556BRK04402964DORMANT TOK00055620261231                                                                       N                                        ",
+      "why": "line 556 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0187",
+      "record": "TYN000000559BRN04426721DORMANT TOK00055920251130                                                                       N                                        ",
+      "why": "line 559 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0188",
+      "record": "TYN000000562BRQ04450478DORMANT TOK00056220240131                                                                       N                                        ",
+      "why": "line 562 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0189",
+      "record": "TYN000000565BRT04474235DORMANT TOK00056520260228                                                                       N                                        ",
+      "why": "line 565 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0190",
+      "record": "TYN000000568BRW04497992DORMANT TOK00056820261231                                                                       N                                        ",
+      "why": "line 568 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0191",
+      "record": "TYN000000571BRZ04521749DORMANT TOK00057120251130                                                                       N                                        ",
+      "why": "line 571 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0192",
+      "record": "TYN000000574BRC04545506DORMANT TOK00057420240131                                                                       N                                        ",
+      "why": "line 574 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0193",
+      "record": "TYN000000577BRF04569263DORMANT TOK00057720260228                                                                       N                                        ",
+      "why": "line 577 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0194",
+      "record": "TYN000000580BRI04593020DORMANT TOK00058020261231                                                                       N                                        ",
+      "why": "line 580 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0195",
+      "record": "TYN000000583BRL04616777DORMANT TOK00058320251130                                                                       N                                        ",
+      "why": "line 583 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0196",
+      "record": "TYN000000586BRO04640534DORMANT TOK00058620240131                                                                       N                                        ",
+      "why": "line 586 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0197",
+      "record": "TYN000000589BRR04664291DORMANT TOK00058920260228                                                                       N                                        ",
+      "why": "line 589 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0198",
+      "record": "TYN000000592BRU04688048DORMANT TOK00059220261231                                                                       N                                        ",
+      "why": "line 592 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0199",
+      "record": "TYN000000595BRX04711805DORMANT TOK00059520251130                                                                       N                                        ",
+      "why": "line 595 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0200",
+      "record": "TYN000000598BRA04735562DORMANT TOK00059820240131                                                                       N                                        ",
+      "why": "line 598 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0201",
+      "record": "TYN000000601BRD04759319DORMANT TOK00060120260228                                                                       N                                        ",
+      "why": "line 601 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0202",
+      "record": "TYN000000604BRG04783076DORMANT TOK00060420261231                                                                       N                                        ",
+      "why": "line 604 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0203",
+      "record": "TYN000000607BRJ04806833DORMANT TOK00060720251130                                                                       N                                        ",
+      "why": "line 607 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0204",
+      "record": "TYN000000610BRM04830590DORMANT TOK00061020240131                                                                       N                                        ",
+      "why": "line 610 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0205",
+      "record": "TYN000000613BRP04854347DORMANT TOK00061320260228                                                                       N                                        ",
+      "why": "line 613 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0206",
+      "record": "TYN000000616BRS04878104DORMANT TOK00061620261231                                                                       N                                        ",
+      "why": "line 616 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0207",
+      "record": "TYN000000619BRV04901861DORMANT TOK00061920251130                                                                       N                                        ",
+      "why": "line 619 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0208",
+      "record": "TYN000000622BRY04925618DORMANT TOK00062220240131                                                                       N                                        ",
+      "why": "line 622 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0209",
+      "record": "TYN000000625BRB04949375DORMANT TOK00062520260228                                                                       N                                        ",
+      "why": "line 625 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0210",
+      "record": "TYN000000628BRE04973132DORMANT TOK00062820261231                                                                       N                                        ",
+      "why": "line 628 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0211",
+      "record": "TYN000000631BRH04996889DORMANT TOK00063120251130                                                                       N                                        ",
+      "why": "line 631 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0212",
+      "record": "TYN000000634BRK05020646DORMANT TOK00063420240131                                                                       N                                        ",
+      "why": "line 634 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0213",
+      "record": "TYN000000637BRN05044403DORMANT TOK00063720260228                                                                       N                                        ",
+      "why": "line 637 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0214",
+      "record": "TYN000000640BRQ05068160DORMANT TOK00064020261231                                                                       N                                        ",
+      "why": "line 640 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0215",
+      "record": "TYN000000643BRT05091917DORMANT TOK00064320251130                                                                       N                                        ",
+      "why": "line 643 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0216",
+      "record": "TYN000000646BRW05115674DORMANT TOK00064620240131                                                                       N                                        ",
+      "why": "line 646 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0217",
+      "record": "TYN000000649BRZ05139431DORMANT TOK00064920260228                                                                       N                                        ",
+      "why": "line 649 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0218",
+      "record": "TYN000000652BRC05163188DORMANT TOK00065220261231                                                                       N                                        ",
+      "why": "line 652 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0219",
+      "record": "TYN000000655BRF05186945DORMANT TOK00065520251130                                                                       N                                        ",
+      "why": "line 655 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0220",
+      "record": "TYN000000658BRI05210702DORMANT TOK00065820240131                                                                       N                                        ",
+      "why": "line 658 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0221",
+      "record": "TYN000000661BRL05234459DORMANT TOK00066120260228                                                                       N                                        ",
+      "why": "line 661 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0222",
+      "record": "TYN000000664BRO05258216DORMANT TOK00066420261231                                                                       N                                        ",
+      "why": "line 664 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0223",
+      "record": "TYN000000667BRR05281973DORMANT TOK00066720251130                                                                       N                                        ",
+      "why": "line 667 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0224",
+      "record": "TYN000000670BRU05305730DORMANT TOK00067020240131                                                                       N                                        ",
+      "why": "line 670 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0225",
+      "record": "TYN000000673BRX05329487DORMANT TOK00067320260228                                                                       N                                        ",
+      "why": "line 673 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0226",
+      "record": "TYN000000676BRA05353244DORMANT TOK00067620261231                                                                       N                                        ",
+      "why": "line 676 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0227",
+      "record": "TYN000000679BRD05377001DORMANT TOK00067920251130                                                                       N                                        ",
+      "why": "line 679 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0228",
+      "record": "TYN000000682BRG05400758DORMANT TOK00068220240131                                                                       N                                        ",
+      "why": "line 682 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0229",
+      "record": "TYN000000685BRJ05424515DORMANT TOK00068520260228                                                                       N                                        ",
+      "why": "line 685 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0230",
+      "record": "TYN000000688BRM05448272DORMANT TOK00068820261231                                                                       N                                        ",
+      "why": "line 688 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0231",
+      "record": "TYN000000691BRP05472029DORMANT TOK00069120251130                                                                       N                                        ",
+      "why": "line 691 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0232",
+      "record": "TYN000000694BRS05495786DORMANT TOK00069420240131                                                                       N                                        ",
+      "why": "line 694 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0233",
+      "record": "TYN000000697BRV05519543DORMANT TOK00069720260228                                                                       N                                        ",
+      "why": "line 697 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0234",
+      "record": "TYN000000700BRY05543300DORMANT TOK00070020261231                                                                       N                                        ",
+      "why": "line 700 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0235",
+      "record": "TYN000000703BRB05567057DORMANT TOK00070320251130                                                                       N                                        ",
+      "why": "line 703 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0236",
+      "record": "TYN000000706BRE05590814DORMANT TOK00070620240131                                                                       N                                        ",
+      "why": "line 706 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0237",
+      "record": "TYN000000709BRH05614571DORMANT TOK00070920260228                                                                       N                                        ",
+      "why": "line 709 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0238",
+      "record": "TYN000000712BRK05638328DORMANT TOK00071220261231                                                                       Y                                        ",
+      "why": "line 712 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0239",
+      "record": "TYN000000715BRN05662085DORMANT TOK00071520251130                                                                       N                                        ",
+      "why": "line 715 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0240",
+      "record": "TYN000000718BRQ05685842DORMANT TOK00071820240131                                                                       N                                        ",
+      "why": "line 718 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0241",
+      "record": "TYN000000721BRT05709599DORMANT TOK00072120260228                                                                       N                                        ",
+      "why": "line 721 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0242",
+      "record": "TYN000000724BRW05733356DORMANT TOK00072420261231                                                                       N                                        ",
+      "why": "line 724 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0243",
+      "record": "TYN000000727BRZ05757113DORMANT TOK00072720251130                                                                       N                                        ",
+      "why": "line 727 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0244",
+      "record": "TYN000000730BRC05780870DORMANT TOK00073020240131                                                                       N                                        ",
+      "why": "line 730 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0245",
+      "record": "TYN000000733BRF05804627DORMANT TOK00073320260228                                                                       N                                        ",
+      "why": "line 733 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0246",
+      "record": "TYN000000736BRI05828384DORMANT TOK00073620261231                                                                       N                                        ",
+      "why": "line 736 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0247",
+      "record": "TYN000000739BRL05852141DORMANT TOK00073920251130                                                                       N                                        ",
+      "why": "line 739 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0248",
+      "record": "TYN000000742BRO05875898DORMANT TOK00074220240131                                                                       N                                        ",
+      "why": "line 742 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0249",
+      "record": "TYN000000745BRR05899655DORMANT TOK00074520260228                                                                       N                                        ",
+      "why": "line 745 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0250",
+      "record": "TYN000000748BRU05923412DORMANT TOK00074820261231                                                                       N                                        ",
+      "why": "line 748 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0251",
+      "record": "TYN000000751BRX05947169DORMANT TOK00075120251130                                                                       N                                        ",
+      "why": "line 751 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0252",
+      "record": "TYN000000754BRA05970926DORMANT TOK00075420240131                                                                       N                                        ",
+      "why": "line 754 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0253",
+      "record": "TYN000000757BRD05994683DORMANT TOK00075720260228                                                                       N                                        ",
+      "why": "line 757 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0254",
+      "record": "TYN000000760BRG06018440DORMANT TOK00076020261231                                                                       N                                        ",
+      "why": "line 760 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0255",
+      "record": "TYN000000763BRJ06042197DORMANT TOK00076320251130                                                                       N                                        ",
+      "why": "line 763 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0256",
+      "record": "TYN000000766BRM06065954DORMANT TOK00076620240131                                                                       N                                        ",
+      "why": "line 766 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0257",
+      "record": "TYN000000769BRP06089711DORMANT TOK00076920260228                                                                       N                                        ",
+      "why": "line 769 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0258",
+      "record": "TYN000000772BRS06113468DORMANT TOK00077220261231                                                                       N                                        ",
+      "why": "line 772 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0259",
+      "record": "TYN000000775BRV06137225DORMANT TOK00077520251130                                                                       N                                        ",
+      "why": "line 775 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0260",
+      "record": "TYN000000778BRY06160982DORMANT TOK00077820240131                                                                       N                                        ",
+      "why": "line 778 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0261",
+      "record": "TYN000000781BRB06184739DORMANT TOK00078120260228                                                                       N                                        ",
+      "why": "line 781 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0262",
+      "record": "TYN000000784BRE06208496DORMANT TOK00078420261231                                                                       N                                        ",
+      "why": "line 784 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0263",
+      "record": "TYN000000787BRH06232253DORMANT TOK00078720251130                                                                       N                                        ",
+      "why": "line 787 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0264",
+      "record": "TYN000000790BRK06256010DORMANT TOK00079020240131                                                                       N                                        ",
+      "why": "line 790 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0265",
+      "record": "TYN000000793BRN06279767DORMANT TOK00079320260228                                                                       N                                        ",
+      "why": "line 793 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0266",
+      "record": "TYN000000796BRQ06303524DORMANT TOK00079620261231                                                                       N                                        ",
+      "why": "line 796 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0267",
+      "record": "TYN000000799BRT06327281DORMANT TOK00079920251130                                                                       N                                        ",
+      "why": "line 799 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0268",
+      "record": "TYN000000802BRW06351038DORMANT TOK00080220240131                                                                       N                                        ",
+      "why": "line 802 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0269",
+      "record": "TYN000000805BRZ06374795DORMANT TOK00080520260228                                                                       N                                        ",
+      "why": "line 805 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0270",
+      "record": "TYN000000808BRC06398552DORMANT TOK00080820261231                                                                       N                                        ",
+      "why": "line 808 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0271",
+      "record": "TYN000000811BRF06422309DORMANT TOK00081120251130                                                                       N                                        ",
+      "why": "line 811 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0272",
+      "record": "TYN000000814BRI06446066DORMANT TOK00081420240131                                                                       N                                        ",
+      "why": "line 814 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0273",
+      "record": "TYN000000817BRL06469823DORMANT TOK00081720260228                                                                       N                                        ",
+      "why": "line 817 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0274",
+      "record": "TYN000000820BRO06493580DORMANT TOK00082020261231                                                                       N                                        ",
+      "why": "line 820 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0275",
+      "record": "TYN000000823BRR06517337DORMANT TOK00082320251130                                                                       N                                        ",
+      "why": "line 823 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0276",
+      "record": "TYN000000826BRU06541094DORMANT TOK00082620240131                                                                       N                                        ",
+      "why": "line 826 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0277",
+      "record": "TYN000000829BRX06564851DORMANT TOK00082920260228                                                                       N                                        ",
+      "why": "line 829 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0278",
+      "record": "TYN000000832BRA06588608DORMANT TOK00083220261231                                                                       N                                        ",
+      "why": "line 832 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0279",
+      "record": "TYN000000835BRD06612365DORMANT TOK00083520251130                                                                       N                                        ",
+      "why": "line 835 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0280",
+      "record": "TYN000000838BRG06636122DORMANT TOK00083820240131                                                                       N                                        ",
+      "why": "line 838 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0281",
+      "record": "TYN000000841BRJ06659879DORMANT TOK00084120260228                                                                       N                                        ",
+      "why": "line 841 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0282",
+      "record": "TYN000000844BRM06683636DORMANT TOK00084420261231                                                                       N                                        ",
+      "why": "line 844 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0283",
+      "record": "TYN000000847BRP06707393DORMANT TOK00084720251130                                                                       N                                        ",
+      "why": "line 847 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0284",
+      "record": "TYN000000850BRS06731150DORMANT TOK00085020240131                                                                       N                                        ",
+      "why": "line 850 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0285",
+      "record": "TYN000000853BRV06754907DORMANT TOK00085320260228                                                                       N                                        ",
+      "why": "line 853 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0286",
+      "record": "TYN000000856BRY06778664DORMANT TOK00085620261231                                                                       N                                        ",
+      "why": "line 856 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0287",
+      "record": "TYN000000859BRB06802421DORMANT TOK00085920251130                                                                       N                                        ",
+      "why": "line 859 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0288",
+      "record": "TYN000000862BRE06826178DORMANT TOK00086220240131                                                                       N                                        ",
+      "why": "line 862 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0289",
+      "record": "TYN000000865BRH06849935DORMANT TOK00086520260228                                                                       N                                        ",
+      "why": "line 865 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0290",
+      "record": "TYN000000868BRK06873692DORMANT TOK00086820261231                                                                       N                                        ",
+      "why": "line 868 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0291",
+      "record": "TYN000000871BRN06897449DORMANT TOK00087120251130                                                                       N                                        ",
+      "why": "line 871 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0292",
+      "record": "TYN000000874BRQ06921206DORMANT TOK00087420240131                                                                       N                                        ",
+      "why": "line 874 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0293",
+      "record": "TYN000000877BRT06944963DORMANT TOK00087720260228                                                                       N                                        ",
+      "why": "line 877 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0294",
+      "record": "TYN000000880BRW06968720DORMANT TOK00088020261231                                                                       N                                        ",
+      "why": "line 880 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0295",
+      "record": "TYN000000883BRZ06992477DORMANT TOK00088320251130                                                                       N                                        ",
+      "why": "line 883 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0296",
+      "record": "TYN000000886BRC07016234DORMANT TOK00088620240131                                                                       N                                        ",
+      "why": "line 886 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0297",
+      "record": "TYN000000889BRF07039991DORMANT TOK00088920260228                                                                       N                                        ",
+      "why": "line 889 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0298",
+      "record": "TYN000000892BRI07063748DORMANT TOK00089220261231                                                                       N                                        ",
+      "why": "line 892 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0299",
+      "record": "TYN000000895BRL07087505DORMANT TOK00089520251130                                                                       N                                        ",
+      "why": "line 895 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0300",
+      "record": "TYN000000898BRO07111262DORMANT TOK00089820240131                                                                       N                                        ",
+      "why": "line 898 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0301",
+      "record": "TYN000000901BRR07135019DORMANT TOK00090120260228                                                                       N                                        ",
+      "why": "line 901 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0302",
+      "record": "TYN000000904BRU07158776DORMANT TOK00090420261231                                                                       N                                        ",
+      "why": "line 904 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0303",
+      "record": "TYN000000907BRX07182533DORMANT TOK00090720251130                                                                       N                                        ",
+      "why": "line 907 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0304",
+      "record": "TYN000000910BRA07206290DORMANT TOK00091020240131                                                                       N                                        ",
+      "why": "line 910 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0305",
+      "record": "TYN000000913BRD07230047DORMANT TOK00091320260228                                                                       N                                        ",
+      "why": "line 913 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0306",
+      "record": "TYN000000916BRG07253804DORMANT TOK00091620261231                                                                       N                                        ",
+      "why": "line 916 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0307",
+      "record": "TYN000000919BRJ07277561DORMANT TOK00091920251130                                                                       N                                        ",
+      "why": "line 919 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0308",
+      "record": "TYN000000922BRM07301318DORMANT TOK00092220240131                                                                       N                                        ",
+      "why": "line 922 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0309",
+      "record": "TYN000000925BRP07325075DORMANT TOK00092520260228                                                                       N                                        ",
+      "why": "line 925 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0310",
+      "record": "TYN000000928BRS07348832DORMANT TOK00092820261231                                                                       N                                        ",
+      "why": "line 928 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0311",
+      "record": "TYN000000931BRV07372589DORMANT TOK00093120251130                                                                       N                                        ",
+      "why": "line 931 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0312",
+      "record": "TYN000000934BRY07396346DORMANT TOK00093420240131                                                                       N                                        ",
+      "why": "line 934 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0313",
+      "record": "TYN000000937BRB07420103DORMANT TOK00093720260228                                                                       N                                        ",
+      "why": "line 937 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0314",
+      "record": "TYN000000940BRE07443860DORMANT TOK00094020261231                                                                       N                                        ",
+      "why": "line 940 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0315",
+      "record": "TYN000000943BRH07467617DORMANT TOK00094320251130                                                                       N                                        ",
+      "why": "line 943 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0316",
+      "record": "TYN000000946BRK07491374DORMANT TOK00094620240131                                                                       N                                        ",
+      "why": "line 946 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0317",
+      "record": "TYN000000949BRN07515131DORMANT TOK00094920260228                                                                       N                                        ",
+      "why": "line 949 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0318",
+      "record": "TYN000000952BRQ07538888DORMANT TOK00095220261231                                                                       N                                        ",
+      "why": "line 952 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0319",
+      "record": "TYN000000955BRT07562645DORMANT TOK00095520251130                                                                       N                                        ",
+      "why": "line 955 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0320",
+      "record": "TYN000000958BRW07586402DORMANT TOK00095820240131                                                                       N                                        ",
+      "why": "line 958 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0321",
+      "record": "TYN000000961BRZ07610159DORMANT TOK00096120260228                                                                       N                                        ",
+      "why": "line 961 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0322",
+      "record": "TYN000000964BRC07633916DORMANT TOK00096420261231                                                                       N                                        ",
+      "why": "line 964 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0323",
+      "record": "TYN000000967BRF07657673DORMANT TOK00096720251130                                                                       N                                        ",
+      "why": "line 967 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0324",
+      "record": "TYN000000970BRI07681430DORMANT TOK00097020240131                                                                       N                                        ",
+      "why": "line 970 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0325",
+      "record": "TYN000000973BRL07705187DORMANT TOK00097320260228                                                                       N                                        ",
+      "why": "line 973 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0326",
+      "record": "TYN000000976BRO07728944DORMANT TOK00097620261231                                                                       N                                        ",
+      "why": "line 976 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0327",
+      "record": "TYN000000979BRR07752701DORMANT TOK00097920251130                                                                       Y                                        ",
+      "why": "line 979 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0328",
+      "record": "TYN000000982BRU07776458DORMANT TOK00098220240131                                                                       N                                        ",
+      "why": "line 982 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0329",
+      "record": "TYN000000985BRX07800215DORMANT TOK00098520260228                                                                       N                                        ",
+      "why": "line 985 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0330",
+      "record": "TYN000000988BRA07823972DORMANT TOK00098820261231                                                                       N                                        ",
+      "why": "line 988 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0331",
+      "record": "TYN000000991BRD07847729DORMANT TOK00099120251130                                                                       N                                        ",
+      "why": "line 991 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0332",
+      "record": "TYN000000994BRG07871486DORMANT TOK00099420240131                                                                       N                                        ",
+      "why": "line 994 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0333",
+      "record": "TYN000000997BRJ07895243DORMANT TOK00099720260228                                                                       N                                        ",
+      "why": "line 997 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0334",
+      "record": "TYN000001000BRM07919000DORMANT TOK00100020261231                                                                       N                                        ",
+      "why": "line 1000 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0335",
+      "record": "TYN000001003BRP07942757DORMANT TOK00100320251130                                                                       N                                        ",
+      "why": "line 1003 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0336",
+      "record": "TYN000001006BRS07966514DORMANT TOK00100620240131                                                                       N                                        ",
+      "why": "line 1006 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0337",
+      "record": "TYN000001009BRV07990271DORMANT TOK00100920260228                                                                       N                                        ",
+      "why": "line 1009 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0338",
+      "record": "TYN000001012BRY08014028DORMANT TOK00101220261231                                                                       N                                        ",
+      "why": "line 1012 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0339",
+      "record": "TYN000001015BRB08037785DORMANT TOK00101520251130                                                                       N                                        ",
+      "why": "line 1015 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0340",
+      "record": "TYN000001018BRE08061542DORMANT TOK00101820240131                                                                       N                                        ",
+      "why": "line 1018 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0341",
+      "record": "TYN000001021BRH08085299DORMANT TOK00102120260228                                                                       N                                        ",
+      "why": "line 1021 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0342",
+      "record": "TYN000001024BRK08109056DORMANT TOK00102420261231                                                                       N                                        ",
+      "why": "line 1024 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0343",
+      "record": "TYN000001027BRN08132813DORMANT TOK00102720251130                                                                       N                                        ",
+      "why": "line 1027 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0344",
+      "record": "TYN000001030BRQ08156570DORMANT TOK00103020240131                                                                       N                                        ",
+      "why": "line 1030 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0345",
+      "record": "TYN000001033BRT08180327DORMANT TOK00103320260228                                                                       N                                        ",
+      "why": "line 1033 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0346",
+      "record": "TYN000001036BRW08204084DORMANT TOK00103620261231                                                                       N                                        ",
+      "why": "line 1036 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0347",
+      "record": "TYN000001039BRZ08227841DORMANT TOK00103920251130                                                                       N                                        ",
+      "why": "line 1039 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0348",
+      "record": "TYN000001042BRC08251598DORMANT TOK00104220240131                                                                       N                                        ",
+      "why": "line 1042 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0349",
+      "record": "TYN000001045BRF08275355DORMANT TOK00104520260228                                                                       N                                        ",
+      "why": "line 1045 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0350",
+      "record": "TYN000001048BRI08299112DORMANT TOK00104820261231                                                                       N                                        ",
+      "why": "line 1048 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0351",
+      "record": "TYN000001051BRL08322869DORMANT TOK00105120251130                                                                       N                                        ",
+      "why": "line 1051 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0352",
+      "record": "TYN000001054BRO08346626DORMANT TOK00105420240131                                                                       N                                        ",
+      "why": "line 1054 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0353",
+      "record": "TYN000001057BRR08370383DORMANT TOK00105720260228                                                                       N                                        ",
+      "why": "line 1057 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0354",
+      "record": "TYN000001060BRU08394140DORMANT TOK00106020261231                                                                       N                                        ",
+      "why": "line 1060 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0355",
+      "record": "TYN000001063BRX08417897DORMANT TOK00106320251130                                                                       N                                        ",
+      "why": "line 1063 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0356",
+      "record": "TYN000001066BRA08441654DORMANT TOK00106620240131                                                                       N                                        ",
+      "why": "line 1066 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0357",
+      "record": "TYN000001069BRD08465411DORMANT TOK00106920260228                                                                       N                                        ",
+      "why": "line 1069 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0358",
+      "record": "TYN000001072BRG08489168DORMANT TOK00107220261231                                                                       N                                        ",
+      "why": "line 1072 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0359",
+      "record": "TYN000001075BRJ08512925DORMANT TOK00107520251130                                                                       N                                        ",
+      "why": "line 1075 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0360",
+      "record": "TYN000001078BRM08536682DORMANT TOK00107820240131                                                                       N                                        ",
+      "why": "line 1078 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0361",
+      "record": "TYN000001081BRP08560439DORMANT TOK00108120260228                                                                       N                                        ",
+      "why": "line 1081 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0362",
+      "record": "TYN000001084BRS08584196DORMANT TOK00108420261231                                                                       N                                        ",
+      "why": "line 1084 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0363",
+      "record": "TYN000001087BRV08607953DORMANT TOK00108720251130                                                                       N                                        ",
+      "why": "line 1087 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0364",
+      "record": "TYN000001090BRY08631710DORMANT TOK00109020240131                                                                       N                                        ",
+      "why": "line 1090 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0365",
+      "record": "TYN000001093BRB08655467DORMANT TOK00109320260228                                                                       N                                        ",
+      "why": "line 1093 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0366",
+      "record": "TYN000001096BRE08679224DORMANT TOK00109620261231                                                                       N                                        ",
+      "why": "line 1096 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0367",
+      "record": "TYN000001099BRH08702981DORMANT TOK00109920251130                                                                       N                                        ",
+      "why": "line 1099 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0368",
+      "record": "TYN000001102BRK08726738DORMANT TOK00110220240131                                                                       N                                        ",
+      "why": "line 1102 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0369",
+      "record": "TYN000001105BRN08750495DORMANT TOK00110520260228                                                                       N                                        ",
+      "why": "line 1105 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0370",
+      "record": "TYN000001108BRQ08774252DORMANT TOK00110820261231                                                                       N                                        ",
+      "why": "line 1108 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0371",
+      "record": "TYN000001111BRT08798009DORMANT TOK00111120251130                                                                       N                                        ",
+      "why": "line 1111 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0372",
+      "record": "TYN000001114BRW08821766DORMANT TOK00111420240131                                                                       N                                        ",
+      "why": "line 1114 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0373",
+      "record": "TYN000001117BRZ08845523DORMANT TOK00111720260228                                                                       N                                        ",
+      "why": "line 1117 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0374",
+      "record": "TYN000001120BRC08869280DORMANT TOK00112020261231                                                                       N                                        ",
+      "why": "line 1120 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0375",
+      "record": "TYN000001123BRF08893037DORMANT TOK00112320251130                                                                       N                                        ",
+      "why": "line 1123 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0376",
+      "record": "TYN000001126BRI08916794DORMANT TOK00112620240131                                                                       N                                        ",
+      "why": "line 1126 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0377",
+      "record": "TYN000001129BRL08940551DORMANT TOK00112920260228                                                                       N                                        ",
+      "why": "line 1129 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0378",
+      "record": "TYN000001132BRO08964308DORMANT TOK00113220261231                                                                       N                                        ",
+      "why": "line 1132 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0379",
+      "record": "TYN000001135BRR08988065DORMANT TOK00113520251130                                                                       N                                        ",
+      "why": "line 1135 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0380",
+      "record": "TYN000001138BRU09011822DORMANT TOK00113820240131                                                                       N                                        ",
+      "why": "line 1138 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0381",
+      "record": "TYN000001141BRX09035579DORMANT TOK00114120260228                                                                       N                                        ",
+      "why": "line 1141 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0382",
+      "record": "TYN000001144BRA09059336DORMANT TOK00114420261231                                                                       N                                        ",
+      "why": "line 1144 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0383",
+      "record": "TYN000001147BRD09083093DORMANT TOK00114720251130                                                                       N                                        ",
+      "why": "line 1147 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0384",
+      "record": "TYN000001150BRG09106850DORMANT TOK00115020240131                                                                       N                                        ",
+      "why": "line 1150 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0385",
+      "record": "TYN000001153BRJ09130607DORMANT TOK00115320260228                                                                       N                                        ",
+      "why": "line 1153 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0386",
+      "record": "TYN000001156BRM09154364DORMANT TOK00115620261231                                                                       N                                        ",
+      "why": "line 1156 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0387",
+      "record": "TYN000001159BRP09178121DORMANT TOK00115920251130                                                                       N                                        ",
+      "why": "line 1159 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0388",
+      "record": "TYN000001162BRS09201878DORMANT TOK00116220240131                                                                       N                                        ",
+      "why": "line 1162 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0389",
+      "record": "TYN000001165BRV09225635DORMANT TOK00116520260228                                                                       N                                        ",
+      "why": "line 1165 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0390",
+      "record": "TYN000001168BRY09249392DORMANT TOK00116820261231                                                                       N                                        ",
+      "why": "line 1168 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0391",
+      "record": "TYN000001171BRB09273149DORMANT TOK00117120251130                                                                       N                                        ",
+      "why": "line 1171 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0392",
+      "record": "TYN000001174BRE09296906DORMANT TOK00117420240131                                                                       N                                        ",
+      "why": "line 1174 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0393",
+      "record": "TYN000001177BRH09320663DORMANT TOK00117720260228                                                                       N                                        ",
+      "why": "line 1177 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0394",
+      "record": "TYN000001180BRK09344420DORMANT TOK00118020261231                                                                       N                                        ",
+      "why": "line 1180 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0395",
+      "record": "TYN000001183BRN09368177DORMANT TOK00118320251130                                                                       N                                        ",
+      "why": "line 1183 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0396",
+      "record": "TYN000001186BRQ09391934DORMANT TOK00118620240131                                                                       N                                        ",
+      "why": "line 1186 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0397",
+      "record": "TYN000001189BRT09415691DORMANT TOK00118920260228                                                                       N                                        ",
+      "why": "line 1189 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0398",
+      "record": "TYN000001192BRW09439448DORMANT TOK00119220261231                                                                       N                                        ",
+      "why": "line 1192 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0399",
+      "record": "TYN000001195BRZ09463205DORMANT TOK00119520251130                                                                       N                                        ",
+      "why": "line 1195 of app/data/ascii/transactions.dat in the imported repository"
+    },
+    {
+      "id": "repo-0400",
+      "record": "TYN000001198BRC09486962DORMANT TOK00119820240131                                                                       N                                        ",
+      "why": "line 1198 of app/data/ascii/transactions.dat in the imported repository"
+    }
+  ],
+  "standIns": [
+    "CEE3ABD"
+  ],
+  "import": {
+    "repository": "https://github.com/Nivetha200111/harbor-trust-mainframe",
+    "commit": "cee9da8c58771d66f16fa716d55f02cae2bf81c3",
+    "path": "app/cbl/HTOVDFEE.cbl",
+    "job": "app/jcl/HTOVDFEE.jcl"
+  }
+}
